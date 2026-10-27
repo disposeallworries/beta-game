@@ -1,0 +1,4348 @@
+[
+	{
+		"controls": {
+			"forward": true,
+			"jump": false,
+			"jump_held": true,
+			"sprint": true,
+			"yaw": 0.0
+		},
+		"ticks": 123
+	},
+	{
+		"controls": {
+			"forward": true,
+			"jump": true,
+			"jump_held": true,
+			"sprint": true,
+			"yaw": 0.0
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"jump": false,
+			"jump_held": true,
+			"sprint": true,
+			"yaw": 0.0
+		},
+		"ticks": 83
+	},
+	{
+		"controls": {
+
+		},
+		"ticks": 16
+	},
+	{
+		"controls": {
+			"forward": true,
+			"jump": false,
+			"jump_held": true,
+			"sprint": true,
+			"yaw": -0.412409023285035
+		},
+		"ticks": 6
+	},
+	{
+		"controls": {
+			"forward": true,
+			"jump": true,
+			"jump_held": true,
+			"sprint": true,
+			"yaw": -0.412409023285035
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"jump": false,
+			"jump_held": true,
+			"sprint": true,
+			"yaw": -0.412409023285035
+		},
+		"ticks": 78
+	},
+	{
+		"controls": {
+
+		},
+		"ticks": 16
+	},
+	{
+		"controls": {
+			"forward": true,
+			"jump": false,
+			"jump_held": true,
+			"sprint": true,
+			"yaw": 0.685824322536908
+		},
+		"ticks": 15
+	},
+	{
+		"controls": {
+			"forward": true,
+			"jump": true,
+			"jump_held": true,
+			"sprint": true,
+			"yaw": 0.685824322536908
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"jump": false,
+			"jump_held": true,
+			"sprint": true,
+			"yaw": 0.685824322536908
+		},
+		"ticks": 78
+	},
+	{
+		"controls": {
+
+		},
+		"ticks": 16
+	},
+	{
+		"controls": {
+			"forward": true,
+			"jump": false,
+			"jump_held": true,
+			"sprint": true,
+			"yaw": -0.647950611790069
+		},
+		"ticks": 12
+	},
+	{
+		"controls": {
+			"forward": true,
+			"jump": true,
+			"jump_held": true,
+			"sprint": true,
+			"yaw": -0.647950611790069
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"jump": false,
+			"jump_held": true,
+			"sprint": true,
+			"yaw": -0.647950611790069
+		},
+		"ticks": 78
+	},
+	{
+		"controls": {
+
+		},
+		"ticks": 16
+	},
+	{
+		"controls": {
+			"forward": true,
+			"jump": false,
+			"jump_held": true,
+			"sprint": true,
+			"yaw": 0.334879642726023
+		},
+		"ticks": 24
+	},
+	{
+		"controls": {
+			"forward": true,
+			"jump": true,
+			"jump_held": true,
+			"sprint": true,
+			"yaw": 0.334879642726023
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"jump": false,
+			"jump_held": true,
+			"sprint": true,
+			"yaw": 0.334879642726023
+		},
+		"ticks": 237
+	},
+	{
+		"controls": {
+
+		},
+		"ticks": 16
+	},
+	{
+		"controls": {
+			"forward": true,
+			"jump": false,
+			"jump_held": true,
+			"sprint": false,
+			"yaw": 0.000241495201773577
+		},
+		"ticks": 135
+	},
+	{
+		"controls": {
+			"forward": true,
+			"jump": true,
+			"jump_held": true,
+			"sprint": false,
+			"yaw": 0.000241495201773577
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"jump": false,
+			"jump_held": true,
+			"sprint": false,
+			"yaw": 0.000241495201773577
+		},
+		"ticks": 232
+	},
+	{
+		"controls": {
+
+		},
+		"ticks": 16
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235398487532282
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235398520251982
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235398585804233
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235398509218731
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.00023539846522605
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.00023539845397612
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235398475734549
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235398530885857
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235398599478171
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235398543737907
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235398521169978
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235398532327418
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.00023539857789877
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235398637575946
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235398698199838
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235398759793154
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235398822379334
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.00023539888598258
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235398950627887
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235399016341076
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235399083148828
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235399151078721
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235399220159265
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235399290419947
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235399361891269
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235399434604792
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235399508593186
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235399583890275
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235399660531091
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235399738551927
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235399817990397
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.00023539989888549
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235399981277642
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.0002354000652088
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235400150722488
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235400237863893
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235400326679934
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235400417219354
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235400509532805
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235400603672942
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235400699694527
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235400797654532
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235400897612253
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.00023540099962943
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235401103770371
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.00023540119597382
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235401290137543
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235401386324726
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235401484601299
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235401585036089
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235401687700979
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.00023540179267108
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235401900024915
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235401994418264
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235402091004971
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235402189862382
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235402291071525
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235402394717329
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235402500888861
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235402609679585
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.00023540272118763
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235402835516094
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235402952773352
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235403073073408
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235403196536259
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235403323288294
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235403435328981
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.00023540355043625
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235403668737749
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235403790368309
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235403915470456
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235404044194972
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235404176701499
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235404313159198
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235404453747472
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235404598656752
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235404727125395
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235404859667751
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235404996480708
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235405137774046
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235405283771517
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235405434712022
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235405590850918
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235405752461459
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235405919836394
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235406068899787
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235406223476695
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.00023540638387878
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235406550441644
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235406723527176
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235406903526172
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235407090861286
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235407285990338
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235407475142515
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235407672505846
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.00023540786372623
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235408063624249
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235408272804307
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235408475965125
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235408689018853
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235408912706125
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235409147843398
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235409377692612
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235409619941975
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235409857004411
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235410107585459
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235410372875418
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235410633901297
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235410911204666
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235411206357115
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235411498806162
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235411811374154
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235412122286917
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235412456168997
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235412789903891
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235413150260897
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235413512658133
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235413891915353
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235414290324146
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235414710611101
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235415156046169
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235415612978116
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.00023541610189672
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235416628422877
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235417178682891
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235417757400856
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235418394506735
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235419077711897
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235419818472421
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235420617218734
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235421491222205
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235422465369442
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235423556079026
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235424812797604
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.000235426262242238
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+
+		},
+		"ticks": 16
+	},
+	{
+		"controls": {
+			"forward": true,
+			"jump": true,
+			"jump_held": true,
+			"sprint": true,
+			"yaw": 1.5707963267949
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"jump": false,
+			"jump_held": true,
+			"sprint": true,
+			"yaw": 1.5707963267949
+		},
+		"ticks": 49
+	},
+	{
+		"controls": {
+			"forward": true,
+			"jump": true,
+			"jump_held": true,
+			"sprint": true,
+			"yaw": -1.5707963267949
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"jump": false,
+			"jump_held": true,
+			"sprint": true,
+			"yaw": -1.5707963267949
+		},
+		"ticks": 33
+	},
+	{
+		"controls": {
+			"forward": true,
+			"jump": true,
+			"jump_held": true,
+			"sprint": true,
+			"yaw": 1.5707963267949
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"jump": false,
+			"jump_held": true,
+			"sprint": true,
+			"yaw": 1.5707963267949
+		},
+		"ticks": 215
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389588983965
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389533995829
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389553890003
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389518676115
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389518142853
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389502698815
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389522189408
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389485943083
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389525763784
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389509544405
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389528878664
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389533102267
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.13838957362
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389556784261
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389539684436
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389522314262
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389504667277
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.13838948673681
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389468515976
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389449997664
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389431174527
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389412038979
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389392583175
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389418784349
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389399054795
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389378986541
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389405750536
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389385390228
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389364671154
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389392021598
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389419862624
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389398893013
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389377540403
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389406017748
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389384334162
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.13838936224338
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.1383893913855
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389421085355
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389398709349
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389375896746
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389406321817
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389383130985
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389359474015
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389390658995
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389422483653
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.13838939849904
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.13838937401214
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389406670932
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389381747657
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389356285512
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389389821332
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389424098259
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389398255833
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389371829411
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389407075904
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389380140443
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389416308599
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389388844888
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.13838942598357
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389397971357
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389369271743
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389407551304
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389378250204
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389417619389
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389387692058
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389428213897
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389397634131
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389366233452
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389408117254
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389375994963
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.13838941918683
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389386310304
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389430893486
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389397227984
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389362565014
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389408802348
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.1383893732577
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.13838942109448
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389384623921
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389434173285
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389396729385
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389358047709
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389409648636
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389369865387
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389423466587
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389382519686
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389438280392
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389396102709
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389352348347
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389410720592
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389365550926
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389426496282
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389379820338
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389443573009
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389395291337
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389344933119
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389412122367
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389359879164
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389430501009
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389376231833
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389450651005
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389394199503
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389334889835
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389414033852
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389352090053
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389436041715
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389371228218
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389460601072
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389392651407
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389320520469
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389416794836
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389340725835
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389444211738
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389363766852
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389475616275
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389390285508
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.13838929826263
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389421133401
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389322591996
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389457464899
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389351447355
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389500884808
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.13838938622118
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.13838925916276
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.13838942894244
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389289073652
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389482687182
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389327234737
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389552354037
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389377605501
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389646248813
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389447161636
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389206169784
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.13838954944271
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389257836744
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389714647479
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.138389347066621
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+
+		},
+		"ticks": 16
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.57336541753072
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.57336568461684
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.57336622031911
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.57336593194393
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.57336591151952
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.57336616209225
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.57336668834132
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.57336637730946
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.57336633892605
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.57336657958514
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.5733671075812
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.57336677071465
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.57336671550767
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.57336695235671
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.57336719571276
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.57336744584769
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.57336770304876
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.57336796761967
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.5733682398818
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.57336852017546
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.57336880886138
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.57336910632218
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.57336941296412
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.57336972921893
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.57337005554584
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.57337039243379
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.5733707404039
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.57337110001215
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.57337147185235
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.57337185655939
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.57337225481287
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.57337266734112
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.57337309492564
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.57337353840602
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.57337399868546
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.57337447673692
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.57337497360996
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.57337549043845
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.57337602844921
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.57337658897172
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.57337717344908
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.57337778329541
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.57337842036802
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.57337908653179
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.57337978382592
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.57338051448471
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.57338128096156
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.57338208595642
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.57338293244763
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.57338382372868
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.57338476345109
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.57338575567438
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.57338680492469
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.57338791626384
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.57338909537098
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.57339034863964
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.57339168329374
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.57339310752689
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.57339463067078
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.57339309662164
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.57339473303305
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.57339308402555
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.57339485190646
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.57339306931232
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.57339499163637
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.57339305189921
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.57339515823954
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.57339303096801
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.57339536029331
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.57339300533273
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.57339561045985
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.57339297320683
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.57339592824651
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.57339293176797
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.57339634535431
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.57339287628006
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.57339691697008
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.57339279814021
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.57339774845996
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.57339267992016
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.57339906918026
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.57339248014583
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+
+		},
+		"ticks": 16
+	},
+	{
+		"controls": {
+			"drop": false,
+			"forward": true,
+			"yaw": 0.0
+		},
+		"ticks": 106
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.79993185624052
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80209565271062
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80215644810781
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80221208695867
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80226264340248
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80230761275909
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80234757319395
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80238252603126
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80241193448699
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80243632210731
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80245513360279
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80246883477957
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80247683325292
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80247904481871
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80247923426312
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80247941006557
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80247960426664
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80247978471141
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.8024799838532
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80248016912375
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80248037339998
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80248056368955
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80248077330421
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80248096881645
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80248118398455
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80248138493424
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80248160588252
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80248181249632
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80248203946409
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80248225198141
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80248246748264
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80248270389528
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80248292568324
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80248316877273
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80248339712269
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80248364717969
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80248388238319
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.8024841397155
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80248438208155
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80248462808012
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80248489687185
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80248515053002
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.8024854274483
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80248568912471
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80248595487575
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80248622479734
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80248649898843
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80248679769424
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80248708089583
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80248736868584
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80248768181343
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80248797929122
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80248828170878
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.8024885891902
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80248890186373
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80248924137747
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80248958672275
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80248991616283
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249025136025
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249061474152
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249096211393
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.8024913157205
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249167573056
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249204231965
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249241566978
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249279596972
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249318341536
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249357820999
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249398056472
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249356240502
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249397246084
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249354597684
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249396403423
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249352888783
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249395526522
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249439039405
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249394613249
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249349256116
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249393661296
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249439016913
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249392668151
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.8024943900493
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249391631081
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.8024943899241
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249390547106
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249438979318
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249389412971
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249438965613
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249388225111
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.8024943895125
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249386979616
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249438936183
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249385672188
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249438920357
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249384298089
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249438903713
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249382852086
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249438886187
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249381328384
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249438867706
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249379720546
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.8024943884819
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249378021406
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249438827551
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249376222961
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249438805687
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249374316242
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249438782487
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249372291167
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249438757823
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249370136365
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249438731555
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249367838957
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249438703518
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249365384302
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.8024943867353
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249362755683
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249438641377
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249359933927
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249438606818
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249356896938
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249438569572
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249353619111
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249438529312
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249350070618
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249438485657
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249346216488
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.8024943843816
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249342015456
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.8024943838629
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249337418481
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249438329412
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249332366817
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249438266767
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249326789495
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249438197428
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249320599964
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249438120264
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.8024931369157
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249438033869
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249305931358
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249437936484
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249297151429
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249437825866
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249287136658
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249437699124
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249275606831
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249437552455
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249262190014
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249437380758
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249246381679
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249437177028
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249227479837
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.8024943693138
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.8024920447796
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249436629394
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249175879747
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249436249175
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249139359957
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249435755803
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249091098098
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249435089932
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249024346287
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249434141933
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80248925961046
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249432684304
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80248766473285
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.80249430155022
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+
+		},
+		"ticks": 16
+	},
+	{
+		"controls": {
+			"forward": true,
+			"jump": false,
+			"jump_held": true,
+			"sprint": false,
+			"yaw": -1.57034597084825
+		},
+		"ticks": 57
+	},
+	{
+		"controls": {
+			"forward": true,
+			"jump": true,
+			"jump_held": true,
+			"sprint": false,
+			"yaw": -1.57034597084825
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"jump": false,
+			"jump_held": true,
+			"sprint": false,
+			"yaw": -1.57034597084825
+		},
+		"ticks": 75
+	},
+	{
+		"controls": {
+
+		},
+		"ticks": 16
+	},
+	{
+		"controls": {
+			"forward": true,
+			"jump": false,
+			"jump_held": true,
+			"sprint": false,
+			"yaw": -1.97892929420218
+		},
+		"ticks": 75
+	},
+	{
+		"controls": {
+			"forward": true,
+			"jump": true,
+			"jump_held": true,
+			"sprint": false,
+			"yaw": -1.97892929420218
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"jump": false,
+			"jump_held": true,
+			"sprint": false,
+			"yaw": -1.97892929420218
+		},
+		"ticks": 62
+	},
+	{
+		"controls": {
+
+		},
+		"ticks": 16
+	},
+	{
+		"controls": {
+			"forward": true,
+			"jump": false,
+			"jump_held": true,
+			"sprint": true,
+			"yaw": -1.11679290503045
+		},
+		"ticks": 21
+	},
+	{
+		"controls": {
+			"forward": true,
+			"jump": true,
+			"jump_held": true,
+			"sprint": true,
+			"yaw": -1.11679290503045
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"jump": false,
+			"jump_held": true,
+			"sprint": true,
+			"yaw": -1.11679290503045
+		},
+		"ticks": 65
+	},
+	{
+		"controls": {
+
+		},
+		"ticks": 16
+	},
+	{
+		"controls": {
+			"forward": true,
+			"jump": false,
+			"jump_held": true,
+			"sprint": false,
+			"yaw": -1.06909153423472
+		},
+		"ticks": 33
+	},
+	{
+		"controls": {
+			"forward": true,
+			"jump": true,
+			"jump_held": true,
+			"sprint": false,
+			"yaw": -1.06909153423472
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"jump": false,
+			"jump_held": true,
+			"sprint": false,
+			"yaw": -1.06909153423472
+		},
+		"ticks": 93
+	},
+	{
+		"controls": {
+
+		},
+		"ticks": 16
+	},
+	{
+		"controls": {
+			"forward": true,
+			"jump": false,
+			"jump_held": true,
+			"sprint": true,
+			"yaw": -2.02318945636667
+		},
+		"ticks": 30
+	},
+	{
+		"controls": {
+			"forward": true,
+			"jump": true,
+			"jump_held": true,
+			"sprint": true,
+			"yaw": -2.02318945636667
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"jump": false,
+			"jump_held": true,
+			"sprint": true,
+			"yaw": -2.02318945636667
+		},
+		"ticks": 55
+	},
+	{
+		"controls": {
+
+		},
+		"ticks": 16
+	},
+	{
+		"controls": {
+			"forward": true,
+			"jump": false,
+			"jump_held": true,
+			"sprint": true,
+			"yaw": -2.07284482598991
+		},
+		"ticks": 15
+	},
+	{
+		"controls": {
+			"forward": true,
+			"jump": true,
+			"jump_held": true,
+			"sprint": true,
+			"yaw": -2.07284482598991
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"jump": false,
+			"jump_held": true,
+			"sprint": true,
+			"yaw": -2.07284482598991
+		},
+		"ticks": 60
+	},
+	{
+		"controls": {
+
+		},
+		"ticks": 16
+	},
+	{
+		"controls": {
+			"forward": true,
+			"jump": false,
+			"jump_held": true,
+			"sprint": true,
+			"yaw": -1.16523774045948
+		},
+		"ticks": 18
+	},
+	{
+		"controls": {
+			"forward": true,
+			"jump": true,
+			"jump_held": true,
+			"sprint": true,
+			"yaw": -1.16523774045948
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"jump": false,
+			"jump_held": true,
+			"sprint": true,
+			"yaw": -1.16523774045948
+		},
+		"ticks": 69
+	},
+	{
+		"controls": {
+
+		},
+		"ticks": 16
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.03109415675566
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.02913625458878
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.02734915445592
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.02574086528801
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.02431815884931
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.02310334003686
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.02212257685278
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.02141978207775
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.02105739830915
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.02105707818326
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.02105670758482
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.02105627355572
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.02105575828696
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.02105513661435
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.02105437178416
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.02105340791297
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.02105215567999
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.02105046291947
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+
+		},
+		"ticks": 16
+	}
+]
