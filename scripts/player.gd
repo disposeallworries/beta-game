@@ -11,6 +11,13 @@ const RADIUS: float = 0.35
 const HEIGHT: float = 1.15
 const GRAVITY: float = 30.0
 const JUMP_VELOCITY: float = 10.5
+# Follow through immediately to vault instead of settling into a slow pull-up.
+const QUICK_VAULT_WINDOW: float = 0.22
+const QUICK_VAULT_DURATION: float = 0.24
+const ASSIST_VAULT_DURATION: float = 0.18
+const VAULT_BOOST: float = 1.5
+const VAULT_MAX_SPEED: float = 14.5
+const NORMAL_CLIMB_DURATION: float = 0.95
 
 var boxes: Array[AABB] = []
 var velocity: Vector3 = Vector3.ZERO
@@ -45,6 +52,10 @@ var was_grounded: bool = false
 var jump_held: bool = false
 var climb_start: Vector3 = Vector3.ZERO
 var climb_end: Vector3 = Vector3.ZERO
+var quick_vault: bool = false
+var climb_duration: float = NORMAL_CLIMB_DURATION
+var ledge_entry_speed: float = 0.0
+var climb_exit_speed: float = 0.0
 
 
 func queue_jump() -> void:
@@ -75,6 +86,7 @@ func respawn(at: Vector3) -> void:
 	sprint_time = 0.0
 	hang_time = 0.0
 	climb_progress = 0.0
+	_reset_vault()
 	hit.clear()
 
 
@@ -156,8 +168,11 @@ func _move_step(dt: float, controls: Dictionary, direction: Vector3) -> void:
 	if grounded and not was_grounded and pre_vertical_speed < -4.0:
 		dust_requested.emit(position, mini(14, int(-pre_vertical_speed)), 2.5)
 		landed.emit(-pre_vertical_speed)
-	if not grounded and velocity.y < 2.0 and ledge_cooldown <= 0.0:
-		var approach := direction if has_move_input else Vector3(velocity.x, 0.0, velocity.z)
+	var dropping: bool = controls.get("back", false) or controls.get("drop", false)
+	if not grounded and ledge_cooldown <= 0.0 and not dropping:
+		# Use approach momentum from before collision; the wall solver may have
+		# already zeroed its normal component on this tick.
+		var approach := direction if has_move_input else horizontal
 		if approach.length() > 0.5:
 			if absf(approach.x) > absf(approach.z):
 				approach = Vector3(signf(approach.x), 0.0, 0.0)
@@ -165,9 +180,16 @@ func _move_step(dt: float, controls: Dictionary, direction: Vector3) -> void:
 				approach = Vector3(0.0, 0.0, signf(approach.z))
 			var probe: Vector3 = position + approach * (RADIUS + 0.3)
 			for box in boxes:
+				if probe.x <= box.position.x or probe.x >= box.end.x or probe.z <= box.position.z or probe.z >= box.end.z:
+					continue
 				var height_to_top: float = box.end.y - position.y
-				if height_to_top > 0.7 and height_to_top < 1.65 and probe.x > box.position.x and probe.x < box.end.x and probe.z > box.position.z and probe.z < box.end.z:
-					_grab(box, approach)
+				# A body already halfway above the lip gets a forgiving step-over,
+				# including while rising. Keep its height instead of snapping to hang.
+				if height_to_top > 0.0 and height_to_top <= HEIGHT * 0.5:
+					if _try_assisted_vault(box, approach, pre_speed):
+						break
+				elif velocity.y < 2.0 and height_to_top > 0.7 and height_to_top < 1.65:
+					_grab(box, approach, pre_speed)
 					break
 	if state == "move" and not grounded and not hit.is_empty():
 		var index: int = hit["index"]
@@ -238,48 +260,133 @@ func _hang_step(dt: float, controls: Dictionary, drop: bool) -> void:
 		ledge_cooldown = 0.4
 		position -= approach * 0.15
 		drop_time = 0.5
-	elif jump_buffer > 0.0 or (hang_time > 0.5 and (controls.get("forward", false) or controls.get("climb", false))):
+		_reset_vault()
+		return
+	var follow_through: bool = controls.get("forward", false) or controls.get("climb", false)
+	var fast: bool = hang_time <= QUICK_VAULT_WINDOW and (follow_through or jump_buffer > 0.0)
+	if fast or jump_buffer > 0.0 or (hang_time > 0.5 and follow_through):
 		jump_buffer = 0.0
 		var finish: Vector3 = position + approach * (2.0 * RADIUS + 0.34)
 		finish.y = ledge["top"]
 		if not blocked(finish + Vector3.UP * 0.02):
-			state = "climb"
-			climb_progress = 0.0
-			climb_start = position
-			climb_end = finish
+			# Checking the entire rising and crossing path also catches ceilings
+			# above the hanging body, not just obstacles at the destination.
+			if not _vault_path_clear(position, finish):
+				return
+			_begin_climb(finish, fast, QUICK_VAULT_DURATION if fast else NORMAL_CLIMB_DURATION)
+
+
+func _begin_climb(finish: Vector3, fast: bool, duration: float) -> void:
+	state = "climb"
+	grounded = false
+	climb_progress = 0.0
+	climb_start = position
+	climb_end = finish
+	climb_duration = duration
+	quick_vault = fast
+	climb_exit_speed = clampf(ledge_entry_speed + VAULT_BOOST, 5.2, VAULT_MAX_SPEED) if fast else 0.0
+	velocity = Vector3.ZERO
+	jump_buffer = 0.0
+	jump_held = false
 
 
 func _climb_step(dt: float) -> void:
-	climb_progress += dt / 0.95
+	if quick_vault and not _vault_path_clear(position, climb_end):
+		state = "move"
+		grounded = false
+		velocity = Vector3.ZERO
+		ledge_cooldown = 0.3
+		_reset_vault()
+		return
+	climb_progress += dt / climb_duration
 	var progress: float = minf(climb_progress, 1.0)
-	var forward_ease: float = smoothstep(0.42, 0.9, progress)
-	position.y = climb_start.y + (float(ledge["top"]) - 0.25 - climb_start.y) * smoothstep(0.0, 0.4, progress) + 0.25 * smoothstep(0.55, 0.9, progress)
-	position.x = lerpf(climb_start.x, climb_end.x, forward_ease)
-	position.z = lerpf(climb_start.z, climb_end.z, forward_ease)
+	if quick_vault:
+		# Rise clear of the lip before crossing it. This short arc uses the same
+		# contact-pose progress as the slow climb, without its pause at the top.
+		position.y = lerpf(climb_start.y, climb_end.y, smoothstep(0.0, 0.5, progress))
+		var across: float = smoothstep(0.5, 1.0, progress)
+		position.x = lerpf(climb_start.x, climb_end.x, across)
+		position.z = lerpf(climb_start.z, climb_end.z, across)
+	else:
+		var forward_ease: float = smoothstep(0.42, 0.9, progress)
+		position.y = climb_start.y + (float(ledge["top"]) - 0.25 - climb_start.y) * smoothstep(0.0, 0.4, progress) + 0.25 * smoothstep(0.55, 0.9, progress)
+		position.x = lerpf(climb_start.x, climb_end.x, forward_ease)
+		position.z = lerpf(climb_start.z, climb_end.z, forward_ease)
 	if progress >= 1.0:
+		position = climb_end
 		state = "move"
 		grounded = true
 		ledge_cooldown = 0.3
-		velocity = Vector3.ZERO
+		velocity = Vector3(ledge["ax"], 0.0, ledge["az"]) * climb_exit_speed
+		if quick_vault:
+			dust_requested.emit(position, 3, 1.0)
+		_reset_vault()
 
 
-func _grab(box: AABB, approach: Vector3) -> void:
+func _grab(box: AABB, approach: Vector3, entry_speed: float = 0.0) -> void:
 	state = "hang"
 	ledge = {"ax": approach.x, "az": approach.z, "top": box.end.y}
+	_reset_vault()
+	ledge_entry_speed = entry_speed
 	velocity = Vector3.ZERO
 	hang_time = 0.0
-	if approach.x > 0.0:
-		position.x = box.position.x - RADIUS
-	elif approach.x < 0.0:
-		position.x = box.end.x + RADIUS
-	if approach.z > 0.0:
-		position.z = box.position.z - RADIUS
-	elif approach.z < 0.0:
-		position.z = box.end.z + RADIUS
+	position = _ledge_outside(box, approach)
 	position.y = box.end.y - 1.1
 	ledge_front = position.dot(approach) + RADIUS
 	yaw = atan2(approach.x, approach.z)
 	yaw_target = yaw
+
+
+func _try_assisted_vault(box: AABB, approach: Vector3, entry_speed: float) -> bool:
+	var outside: Vector3 = _ledge_outside(box, approach)
+	var finish: Vector3 = outside + approach * (2.0 * RADIUS + 0.34)
+	finish.y = box.end.y
+	if blocked(finish + Vector3.UP * 0.02) or not _vault_path_clear(position, finish):
+		return false
+	ledge = {"ax": approach.x, "az": approach.z, "top": box.end.y}
+	ledge_entry_speed = entry_speed
+	ledge_front = outside.dot(approach) + RADIUS
+	hang_time = 0.0
+	yaw_target = atan2(approach.x, approach.z)
+	_begin_climb(finish, true, ASSIST_VAULT_DURATION)
+	return true
+
+
+func _ledge_outside(box: AABB, approach: Vector3) -> Vector3:
+	var outside: Vector3 = position
+	if approach.x > 0.0:
+		outside.x = box.position.x - RADIUS
+	elif approach.x < 0.0:
+		outside.x = box.end.x + RADIUS
+	if approach.z > 0.0:
+		outside.z = box.position.z - RADIUS
+	elif approach.z < 0.0:
+		outside.z = box.end.z + RADIUS
+	return outside
+
+
+func _vault_path_clear(from: Vector3, finish: Vector3) -> bool:
+	var raised := Vector3(from.x, finish.y, from.z)
+	return _body_sweep_clear(from, raised) and _body_sweep_clear(raised, finish)
+
+
+func _body_sweep_clear(from: Vector3, to: Vector3) -> bool:
+	# Each segment moves on one axis, so this envelope is the exact swept body.
+	# A millimeter inset tolerates contact at the existing wall/floor boundary.
+	var low: Vector3 = from.min(to) + Vector3(-RADIUS + 0.001, 0.001, -RADIUS + 0.001)
+	var high: Vector3 = from.max(to) + Vector3(RADIUS - 0.001, HEIGHT - 0.001, RADIUS - 0.001)
+	var swept := AABB(low, high - low)
+	for box in boxes:
+		if swept.intersects(box):
+			return false
+	return true
+
+
+func _reset_vault() -> void:
+	quick_vault = false
+	climb_duration = NORMAL_CLIMB_DURATION
+	ledge_entry_speed = 0.0
+	climb_exit_speed = 0.0
 
 
 func blocked(at: Vector3) -> bool:

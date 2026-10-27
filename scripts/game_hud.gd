@@ -69,7 +69,7 @@ func setup() -> void:
 	grid.add_theme_constant_override("v_separation", 2)
 	guide.add_child(grid)
 	var controls: Array[Array] = [
-		["WASD", "Move"],
+		["WASD", "Move; hold W to vault ledges"],
 		["Shift", "Sprint"],
 		["Space", "Jump, wall jump, climb up"],
 		["S / Ctrl", "Let go of a ledge or wall"],

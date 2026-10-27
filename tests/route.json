@@ -148,18 +148,18 @@
 			"forward": true,
 			"jump": false,
 			"jump_held": true,
-			"sprint": true,
-			"yaw": 0.334879642726023
+			"sprint": false,
+			"yaw": 0.484879642726023
 		},
-		"ticks": 24
+		"ticks": 87
 	},
 	{
 		"controls": {
 			"forward": true,
 			"jump": true,
 			"jump_held": true,
-			"sprint": true,
-			"yaw": 0.334879642726023
+			"sprint": false,
+			"yaw": 0.484879642726023
 		},
 		"ticks": 1
 	},
@@ -168,10 +168,10 @@
 			"forward": true,
 			"jump": false,
 			"jump_held": true,
-			"sprint": true,
-			"yaw": 0.334879642726023
+			"sprint": false,
+			"yaw": 0.484879642726023
 		},
-		"ticks": 237
+		"ticks": 52
 	},
 	{
 		"controls": {
@@ -184,18 +184,18 @@
 			"forward": true,
 			"jump": false,
 			"jump_held": true,
-			"sprint": false,
-			"yaw": 0.000241495201773577
+			"sprint": true,
+			"yaw": 0.000875721501362309
 		},
-		"ticks": 135
+		"ticks": 144
 	},
 	{
 		"controls": {
 			"forward": true,
 			"jump": true,
 			"jump_held": true,
-			"sprint": false,
-			"yaw": 0.000241495201773577
+			"sprint": true,
+			"yaw": 0.000875721501362309
 		},
 		"ticks": 1
 	},
@@ -204,10 +204,10 @@
 			"forward": true,
 			"jump": false,
 			"jump_held": true,
-			"sprint": false,
-			"yaw": 0.000241495201773577
+			"sprint": true,
+			"yaw": 0.000875721501362309
 		},
-		"ticks": 232
+		"ticks": 63
 	},
 	{
 		"controls": {
@@ -218,945 +218,917 @@
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235398487532282
+			"yaw": 0.000215375265282915
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235398520251982
+			"yaw": 0.00021537528984983
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235398585804233
+			"yaw": 0.000215375339071482
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235398509218731
+			"yaw": 0.000215375266039292
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.00023539846522605
+			"yaw": 0.000215375238292
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.00023539845397612
+			"yaw": 0.000215375235151949
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235398475734549
+			"yaw": 0.000215375256835716
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235398530885857
+			"yaw": 0.000215375303652842
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235398599478171
+			"yaw": 0.00021537537600941
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235398543737907
+			"yaw": 0.000215375323822803
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235398521169978
+			"yaw": 0.000215375296445096
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235398532327418
+			"yaw": 0.000215375294286071
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.00023539857789877
+			"yaw": 0.000215375339637461
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235398637575946
+			"yaw": 0.000215375411705216
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235398698199838
+			"yaw": 0.000215375484960634
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235398759793154
+			"yaw": 0.000215375559433317
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235398822379334
+			"yaw": 0.000215375635153859
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.00023539888598258
+			"yaw": 0.00021537571215389
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235398950627887
+			"yaw": 0.000215375790466116
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235399016341076
+			"yaw": 0.000215375870124369
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235399083148828
+			"yaw": 0.00021537595116365
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235399151078721
+			"yaw": 0.00021537603362019
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235399220159265
+			"yaw": 0.000215376093833622
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235399290419947
+			"yaw": 0.000215376155118841
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235399361891269
+			"yaw": 0.000215376217504723
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235399434604792
+			"yaw": 0.000215376281021187
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235399508593186
+			"yaw": 0.000215376345699246
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235399583890275
+			"yaw": 0.000215376411571062
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235399660531091
+			"yaw": 0.00021537647866999
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235399738551927
+			"yaw": 0.000215376547030643
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235399817990397
+			"yaw": 0.000215376616688946
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.00023539989888549
+			"yaw": 0.000215376700552985
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235399981277642
+			"yaw": 0.000215376773044465
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.0002354000652088
+			"yaw": 0.000215376846952338
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235400150722488
+			"yaw": 0.000215376922318526
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235400237863893
+			"yaw": 0.000215376999186621
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235400326679934
+			"yaw": 0.000215377077601971
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235400417219354
+			"yaw": 0.000215377157611766
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235400509532805
+			"yaw": 0.000215377239265136
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235400603672942
+			"yaw": 0.000215377322613252
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235400699694527
+			"yaw": 0.000215377407709429
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235400797654532
+			"yaw": 0.000215377494609242
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235400897612253
+			"yaw": 0.00021537758337065
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.00023540099962943
+			"yaw": 0.000215377674054118
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235401103770371
+			"yaw": 0.000215377766722762
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.00023540119597382
+			"yaw": 0.000215377861442491
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235401290137543
+			"yaw": 0.000215377958282161
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235401386324726
+			"yaw": 0.000215378057313751
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235401484601299
+			"yaw": 0.00021537814323715
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235401585036089
+			"yaw": 0.000215378231150423
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235401687700979
+			"yaw": 0.000215378321123504
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.00023540179267108
+			"yaw": 0.000215378413229643
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235401900024915
+			"yaw": 0.000215378507545605
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235401994418264
+			"yaw": 0.000215378604151883
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235402091004971
+			"yaw": 0.000215378703132928
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235402189862382
+			"yaw": 0.000215378804577393
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235402291071525
+			"yaw": 0.000215378908578401
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235402394717329
+			"yaw": 0.000215379015233829
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235402500888861
+			"yaw": 0.000215379124646612
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235402609679585
+			"yaw": 0.000215379236925081
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.00023540272118763
+			"yaw": 0.000215379352183313
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235402835516094
+			"yaw": 0.000215379452478165
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235402952773352
+			"yaw": 0.000215379555507312
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235403073073408
+			"yaw": 0.000215379661384116
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235403196536259
+			"yaw": 0.000215379770228291
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235403323288294
+			"yaw": 0.000215379882166361
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235403435328981
+			"yaw": 0.000215379997332141
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.00023540355043625
+			"yaw": 0.00021538011586728
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235403668737749
+			"yaw": 0.000215380237921837
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235403790368309
+			"yaw": 0.000215380363654916
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235403915470456
+			"yaw": 0.000215380493235358
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235404044194972
+			"yaw": 0.000215380626842497
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235404176701499
+			"yaw": 0.000215380764666991
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235404313159198
+			"yaw": 0.000215380885372448
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235404453747472
+			"yaw": 0.000215381010012201
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235404598656752
+			"yaw": 0.000215381138781789
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235404727125395
+			"yaw": 0.000215381271889927
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235404859667751
+			"yaw": 0.000215381409559636
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235404996480708
+			"yaw": 0.000215381552029489
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235405137774046
+			"yaw": 0.000215381699554993
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235405283771517
+			"yaw": 0.000215381852410112
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235405434712022
+			"yaw": 0.000215382010888973
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235405590850918
+			"yaw": 0.000215382175307748
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235405752461459
+			"yaw": 0.000215382320353853
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235405919836394
+			"yaw": 0.000215382484124288
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235406068899787
+			"yaw": 0.000215382641062787
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235406223476695
+			"yaw": 0.000215382804360137
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.00023540638387878
+			"yaw": 0.000215382974410802
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235406550441644
+			"yaw": 0.000215383151642561
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235406723527176
+			"yaw": 0.000215383322033647
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235406903526172
+			"yaw": 0.00021538349993746
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235407090861286
+			"yaw": 0.000215383685862066
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235407285990338
+			"yaw": 0.000215383864873667
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235407475142515
+			"yaw": 0.000215384052337056
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235407672505846
+			"yaw": 0.000215384248865262
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.00023540786372623
+			"yaw": 0.000215384455132073
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235408063624249
+			"yaw": 0.000215384654816981
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235408272804307
+			"yaw": 0.000215384864912812
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235408475965125
+			"yaw": 0.000215385086255548
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235408689018853
+			"yaw": 0.000215385301302574
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235408912706125
+			"yaw": 0.000215385528512668
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235409147843398
+			"yaw": 0.00021538576894778
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235409377692612
+			"yaw": 0.000215386003665635
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235409619941975
+			"yaw": 0.000215386252889865
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235409857004411
+			"yaw": 0.000215386518008166
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235410107585459
+			"yaw": 0.000215386778470277
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235410372875418
+			"yaw": 0.000215387056674645
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235410633901297
+			"yaw": 0.000215387330817298
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235410911204666
+			"yaw": 0.000215387624999141
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235411206357115
+			"yaw": 0.000215387941500756
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235411498806162
+			"yaw": 0.000215388256480391
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235411811374154
+			"yaw": 0.000215388583535174
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235412122286917
+			"yaw": 0.000215388924215809
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235412456168997
+			"yaw": 0.000215389280350398
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235412789903891
+			"yaw": 0.000215389654109373
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235413150260897
+			"yaw": 0.000215390048089565
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235413512658133
+			"yaw": 0.000215390465424321
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235413891915353
+			"yaw": 0.000215390909929612
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235414290324146
+			"yaw": 0.000215391366957992
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235414710611101
+			"yaw": 0.000215391859330684
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235415156046169
+			"yaw": 0.00021539239395058
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235415612978116
+			"yaw": 0.000215392956259902
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.00023541610189672
+			"yaw": 0.000215393552476033
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235416628422877
+			"yaw": 0.000215394204411804
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235417178682891
+			"yaw": 0.000215394912001949
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235417757400856
+			"yaw": 0.000215395691361587
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235418394506735
+			"yaw": 0.000215396565492158
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235419077711897
+			"yaw": 0.000215397528235292
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235419818472421
+			"yaw": 0.000215398638517577
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235420617218734
+			"yaw": 0.000215399913132366
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.000235421491222205
-		},
-		"ticks": 1
-	},
-	{
-		"controls": {
-			"forward": true,
-			"yaw": 0.000235422465369442
-		},
-		"ticks": 1
-	},
-	{
-		"controls": {
-			"forward": true,
-			"yaw": 0.000235423556079026
-		},
-		"ticks": 1
-	},
-	{
-		"controls": {
-			"forward": true,
-			"yaw": 0.000235424812797604
-		},
-		"ticks": 1
-	},
-	{
-		"controls": {
-			"forward": true,
-			"yaw": 0.000235426262242238
+			"yaw": 0.000215401428385182
 		},
 		"ticks": 1
 	},
@@ -1224,964 +1196,971 @@
 			"sprint": true,
 			"yaw": 1.5707963267949
 		},
-		"ticks": 215
+		"ticks": 71
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389588983965
+			"yaw": 0.139117598107139
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389533995829
+			"yaw": 0.132191700556076
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389553890003
+			"yaw": 0.125675121743811
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389518676115
+			"yaw": 0.119564420325924
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389518142853
+			"yaw": 0.113857024874487
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389502698815
+			"yaw": 0.108551055584053
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389522189408
+			"yaw": 0.103645570714545
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389485943083
+			"yaw": 0.0991402605111746
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389525763784
+			"yaw": 0.0950357992732182
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389509544405
+			"yaw": 0.0913336938065549
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389528878664
+			"yaw": 0.0880362960099634
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389533102267
+			"yaw": 0.0851470815783363
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.13838957362
+			"yaw": 0.0826703722455428
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389556784261
+			"yaw": 0.0806116934244996
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389539684436
+			"yaw": 0.0789776023832992
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389522314262
+			"yaw": 0.0777758260278471
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389504667277
+			"yaw": 0.0770153990975214
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.13838948673681
+			"yaw": 0.0767066781370212
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389468515976
+			"yaw": 0.0767066695099892
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389449997664
+			"yaw": 0.0767066607428406
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389431174527
+			"yaw": 0.076706651832134
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389412038979
+			"yaw": 0.0767066427743142
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389392583175
+			"yaw": 0.0767066335657077
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389418784349
+			"yaw": 0.0767066242025175
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389399054795
+			"yaw": 0.0767066146808185
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389378986541
+			"yaw": 0.0767066049965509
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389405750536
+			"yaw": 0.0767065951455157
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389385390228
+			"yaw": 0.0767065851233677
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389364671154
+			"yaw": 0.0767065749256094
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389392021598
+			"yaw": 0.0767065645475845
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389419862624
+			"yaw": 0.0767065539844704
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389398893013
+			"yaw": 0.0767065432312711
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389377540403
+			"yaw": 0.076706532282809
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389406017748
+			"yaw": 0.076706521133717
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389384334162
+			"yaw": 0.076706509778429
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.13838936224338
+			"yaw": 0.0767064982111717
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.1383893913855
+			"yaw": 0.0767064864259538
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389421085355
+			"yaw": 0.0767064744165562
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389398709349
+			"yaw": 0.0767064621765209
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389375896746
+			"yaw": 0.0767064496991396
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389406321817
+			"yaw": 0.076706436977441
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389383130985
+			"yaw": 0.0767064240041782
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389359474015
+			"yaw": 0.0767064107718151
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389390658995
+			"yaw": 0.0767063972725113
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389422483653
+			"yaw": 0.0767063834981067
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.13838939849904
+			"yaw": 0.0767063694401054
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.13838937401214
+			"yaw": 0.0767063550896582
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389406670932
+			"yaw": 0.0767063404375433
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389381747657
+			"yaw": 0.0767063254741477
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389356285512
+			"yaw": 0.0767063101894452
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389389821332
+			"yaw": 0.0767062945729743
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389424098259
+			"yaw": 0.0767062786138145
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389398255833
+			"yaw": 0.0767062623005608
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389371829411
+			"yaw": 0.0767062456212962
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389407075904
+			"yaw": 0.076706228563563
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389380140443
+			"yaw": 0.0767062111143317
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389416308599
+			"yaw": 0.0767061932599677
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389388844888
+			"yaw": 0.0767061749861958
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.13838942598357
+			"yaw": 0.0767061562780623
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389397971357
+			"yaw": 0.0767061371198939
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389369271743
+			"yaw": 0.0767061174952542
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389407551304
+			"yaw": 0.0767060973868963
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389378250204
+			"yaw": 0.0767060767767129
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389417619389
+			"yaw": 0.076706055645681
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389387692058
+			"yaw": 0.0767060339738043
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389428213897
+			"yaw": 0.0767060117400492
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389397634131
+			"yaw": 0.0767059889222773
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389366233452
+			"yaw": 0.0767059654971719
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389408117254
+			"yaw": 0.0767059414401579
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389375994963
+			"yaw": 0.0767059167253166
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.13838941918683
+			"yaw": 0.0767058913252921
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389386310304
+			"yaw": 0.0767058652111901
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389430893486
+			"yaw": 0.0767058383524688
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389397227984
+			"yaw": 0.0767058107168195
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389362565014
+			"yaw": 0.0767057822700366
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389408802348
+			"yaw": 0.076705752975877
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.1383893732577
+			"yaw": 0.0767057227959056
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.13838942109448
+			"yaw": 0.076705691689327
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389384623921
+			"yaw": 0.0767056596128021
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389434173285
+			"yaw": 0.0767056265202457
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389396729385
+			"yaw": 0.0767055923626065
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389358047709
+			"yaw": 0.0767055570876241
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389409648636
+			"yaw": 0.0767055206395621
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389369865387
+			"yaw": 0.0767054829589144
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389423466587
+			"yaw": 0.076705443982081
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389382519686
+			"yaw": 0.0767054036410097
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389438280392
+			"yaw": 0.0767053618627996
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389396102709
+			"yaw": 0.0767053185692616
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389352348347
+			"yaw": 0.0767052736764297
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389410720592
+			"yaw": 0.0767052270940177
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389365550926
+			"yaw": 0.0767051787248132
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389426496282
+			"yaw": 0.076705128464
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389379820338
+			"yaw": 0.0767050761984004
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389443573009
+			"yaw": 0.0767050218056241
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389395291337
+			"yaw": 0.0767049651531114
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389344933119
+			"yaw": 0.0767049060970547
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389412122367
+			"yaw": 0.0767048444811796
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389359879164
+			"yaw": 0.0767047801353638
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389430501009
+			"yaw": 0.0767047128740688
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389376231833
+			"yaw": 0.076704642494553
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389450651005
+			"yaw": 0.0767045687748306
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389394199503
+			"yaw": 0.0767044914713328
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389334889835
+			"yaw": 0.0767044103162193
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389414033852
+			"yaw": 0.076704325014278
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389352090053
+			"yaw": 0.0767042352393364
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389436041715
+			"yaw": 0.0767041406300938
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389371228218
+			"yaw": 0.0767040407852614
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389460601072
+			"yaw": 0.0767039352578729
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389392651407
+			"yaw": 0.0767038235485941
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389320520469
+			"yaw": 0.0767038706300117
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389416794836
+			"yaw": 0.0767037499587213
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389340725835
+			"yaw": 0.0767037977007822
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389444211738
+			"yaw": 0.0767038486107759
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389363766852
+			"yaw": 0.07670371476096
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389475616275
+			"yaw": 0.0767037663418716
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389390285508
+			"yaw": 0.0767038217237659
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.13838929826263
+			"yaw": 0.076703881342855
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389421133401
+			"yaw": 0.0767037274989799
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389322591996
+			"yaw": 0.0767037881542147
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389457464899
+			"yaw": 0.0767038540517194
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389351447355
+			"yaw": 0.0767036781299518
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389500884808
+			"yaw": 0.076703745057254
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.13838938622118
+			"yaw": 0.0767038186304895
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.13838925916276
+			"yaw": 0.0767038998912954
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.13838942894244
+			"yaw": 0.0767036877061592
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389289073652
+			"yaw": 0.0767037708103601
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389482687182
+			"yaw": 0.0767038642119507
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389327234737
+			"yaw": 0.076703607627997
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389552354037
+			"yaw": 0.076703702699989
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389377605501
+			"yaw": 0.0767038122416921
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389646248813
+			"yaw": 0.0767039398285735
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389447161636
+			"yaw": 0.0767035979081164
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389206169784
+			"yaw": 0.0767037295223063
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.13838954944271
+			"yaw": 0.0767038899334927
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389257836744
+			"yaw": 0.0767034158819145
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389714647479
+			"yaw": 0.0767035772988735
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": 0.138389347066621
+			"yaw": 0.0767037912875646
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": 0.0767040885269409
 		},
 		"ticks": 1
 	},
@@ -2194,574 +2173,574 @@
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.57336541753072
+			"yaw": -1.57783977658808
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.57336568461684
+			"yaw": -1.57783994531996
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.57336622031911
+			"yaw": -1.57784028326921
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.57336593194393
+			"yaw": -1.57784079286064
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.57336591151952
+			"yaw": -1.57784037731063
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.57336616209225
+			"yaw": -1.57784012925573
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.57336668834132
+			"yaw": -1.5778400509027
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.57336637730946
+			"yaw": -1.57784014500884
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.57336633892605
+			"yaw": -1.57784041492536
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.57336657958514
+			"yaw": -1.57784086615451
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.5733671075812
+			"yaw": -1.57784035552862
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.57336677071465
+			"yaw": -1.57784001395917
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.57336671550767
+			"yaw": -1.57783984664664
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.57336695235671
+			"yaw": -1.57783985960537
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.57336719571276
+			"yaw": -1.57783987292003
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.57336744584769
+			"yaw": -1.57783988660549
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.57336770304876
+			"yaw": -1.57783990067747
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.57336796761967
+			"yaw": -1.57783991515257
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.5733682398818
+			"yaw": -1.57783993004837
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.57336852017546
+			"yaw": -1.57783994538348
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.57336880886138
+			"yaw": -1.57783996117762
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.57336910632218
+			"yaw": -1.57783997745171
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.57336941296412
+			"yaw": -1.57783999422798
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.57336972921893
+			"yaw": -1.57784001153003
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.57337005554584
+			"yaw": -1.57784002938297
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.57337039243379
+			"yaw": -1.57784004781353
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.5733707404039
+			"yaw": -1.57784006685022
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.57337110001215
+			"yaw": -1.57784008652342
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.57337147185235
+			"yaw": -1.57784010686562
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.57337185655939
+			"yaw": -1.57784012791151
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.57337225481287
+			"yaw": -1.57784014969827
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.57337266734112
+			"yaw": -1.5778401722657
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.57337309492564
+			"yaw": -1.57784019565654
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.57337353840602
+			"yaw": -1.57784021991669
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.57337399868546
+			"yaw": -1.57784024509552
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.57337447673692
+			"yaw": -1.57784027124624
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.57337497360996
+			"yaw": -1.5778402984262
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.57337549043845
+			"yaw": -1.57784032669741
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.57337602844921
+			"yaw": -1.57784035612692
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.57337658897172
+			"yaw": -1.57784038678741
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.57337717344908
+			"yaw": -1.57784041875776
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.57337778329541
+			"yaw": -1.57784045170078
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.57337842036802
+			"yaw": -1.57784048611398
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.57337908653179
+			"yaw": -1.57784052209802
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.57337978382592
+			"yaw": -1.57784055976297
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.57338051448471
+			"yaw": -1.57784059922942
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.57338128096156
+			"yaw": -1.5778406406298
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.57338208595642
+			"yaw": -1.57784068410982
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.57338293244763
+			"yaw": -1.57784072983021
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.57338382372868
+			"yaw": -1.5778407779687
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.57338476345109
+			"yaw": -1.57784082872236
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.57338575567438
+			"yaw": -1.57784088231024
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.57338680492469
+			"yaw": -1.57784093897655
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.57338791626384
+			"yaw": -1.57784099899441
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.57338909537098
+			"yaw": -1.57784106267024
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.57339034863964
+			"yaw": -1.57784113034894
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.57339168329374
+			"yaw": -1.57784120242023
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.57339310752689
+			"yaw": -1.5778412793261
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.57339463067078
+			"yaw": -1.57784136156987
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.57339309662164
+			"yaw": -1.57784144972728
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.57339473303305
+			"yaw": -1.57784154445993
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.57339308402555
+			"yaw": -1.57784164653194
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.57339485190646
+			"yaw": -1.57784175683059
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.57339306931232
+			"yaw": -1.57784187639221
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.57339499163637
+			"yaw": -1.57784200685959
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.57339305189921
+			"yaw": -1.57784214928826
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.57339515823954
+			"yaw": -1.57784230540217
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.57339303096801
+			"yaw": -1.57784247727327
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.57339536029331
+			"yaw": -1.57784266741403
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.57339300533273
+			"yaw": -1.577842878901
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.57339561045985
+			"yaw": -1.57784311554262
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.57339297320683
+			"yaw": -1.5778433821106
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.57339592824651
+			"yaw": -1.57784368466497
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.57339293176797
+			"yaw": -1.57784403102039
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.57339634535431
+			"yaw": -1.57784443143077
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.57339287628006
+			"yaw": -1.57784489962154
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.57339691697008
+			"yaw": -1.57784545394631
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.57339279814021
+			"yaw": -1.57784612122635
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.57339774845996
+			"yaw": -1.57784693990386
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.57339267992016
+			"yaw": -1.57784796809731
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.57339906918026
+			"yaw": -1.57784929803753
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.57339248014583
+			"yaw": -1.57785108539935
 		},
 		"ticks": 1
 	},
@@ -2782,1176 +2761,1176 @@
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.79993185624052
+			"yaw": -1.79991224722099
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80209565271062
+			"yaw": -1.80207273880992
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80215644810781
+			"yaw": -1.80213351123459
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80221208695867
+			"yaw": -1.80218913215449
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80226264340248
+			"yaw": -1.80223962992494
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80230761275909
+			"yaw": -1.80228456078975
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80234757319395
+			"yaw": -1.80232445693713
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80238252603126
+			"yaw": -1.80235933477861
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80241193448699
+			"yaw": -1.80238867282063
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80243632210731
+			"yaw": -1.80241296349556
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80245513360279
+			"yaw": -1.80243166667932
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80246883477957
+			"yaw": -1.80244526348529
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80247683325292
+			"yaw": -1.80245314574882
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80247904481871
+			"yaw": -1.80245522890611
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80247923426312
+			"yaw": -1.80245526803172
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80247941006557
+			"yaw": -1.80245530765431
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80247960426664
+			"yaw": -1.8024553477834
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80247978471141
+			"yaw": -1.80245538842876
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.8024799838532
+			"yaw": -1.80245542960043
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80248016912375
+			"yaw": -1.8024554548452
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80248037339998
+			"yaw": -1.80245551356409
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80248056368955
+			"yaw": -1.80245553969659
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80248077330421
+			"yaw": -1.80245559976
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80248096881645
+			"yaw": -1.80245562681892
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80248118398455
+			"yaw": -1.80245568827836
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80248138493424
+			"yaw": -1.80245571630459
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80248160588252
+			"yaw": -1.80245577921433
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80248181249632
+			"yaw": -1.80245580825109
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80248203946409
+			"yaw": -1.80245587266832
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80248225198141
+			"yaw": -1.80245590276133
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80248246748264
+			"yaw": -1.80245596874638
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80248270389528
+			"yaw": -1.80245599994406
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80248292568324
+			"yaw": -1.80245606756061
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80248316877273
+			"yaw": -1.80245609991427
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80248339712269
+			"yaw": -1.80245616922958
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80248364717969
+			"yaw": -1.80245620279363
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80248388238319
+			"yaw": -1.80245627387882
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.8024841397155
+			"yaw": -1.802456308711
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80248438208155
+			"yaw": -1.80245638164131
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80248462808012
+			"yaw": -1.80245641780296
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80248489687185
+			"yaw": -1.80245649265808
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80248515053002
+			"yaw": -1.8024565302144
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.8024854274483
+			"yaw": -1.80245660707881
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80248568912471
+			"yaw": -1.80245664609919
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80248595487575
+			"yaw": -1.80245672506248
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80248622479734
+			"yaw": -1.80245676562083
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80248649898843
+			"yaw": -1.80245684677814
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80248679769424
+			"yaw": -1.80245688895324
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80248708089583
+			"yaw": -1.80245697240573
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80248736868584
+			"yaw": -1.80245701628164
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80248768181343
+			"yaw": -1.8024571021369
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80248797929122
+			"yaw": -1.80245714780343
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80248828170878
+			"yaw": -1.80245723617607
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.8024885891902
+			"yaw": -1.80245728372923
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80248890186373
+			"yaw": -1.80245737474143
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80248924137747
+			"yaw": -1.80245742428401
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80248958672275
+			"yaw": -1.80245751806618
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80248991616283
+			"yaw": -1.80245756970834
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249025136025
+			"yaw": -1.80245766639983
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249061474152
+			"yaw": -1.80245772025972
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249096211393
+			"yaw": -1.80245782000961
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.8024913157205
+			"yaw": -1.80245787621416
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249167573056
+			"yaw": -1.80245797918212
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249204231965
+			"yaw": -1.80245803786785
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249241566978
+			"yaw": -1.80245814422511
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249279596972
+			"yaw": -1.802458205539
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249318341536
+			"yaw": -1.80245831546943
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249357820999
+			"yaw": -1.80245837956998
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249398056472
+			"yaw": -1.80245849327131
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249356240502
+			"yaw": -1.80245856032964
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249397246084
+			"yaw": -1.80245867801476
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249354597684
+			"yaw": -1.80245874821589
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249396403423
+			"yaw": -1.80245887011437
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249352888783
+			"yaw": -1.80245894365868
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249395526522
+			"yaw": -1.80245907001845
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249439039405
+			"yaw": -1.80245914712323
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249394613249
+			"yaw": -1.80245927821246
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249349256116
+			"yaw": -1.80245935911375
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249393661296
+			"yaw": -1.80245948184924
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249439016913
+			"yaw": -1.80245959369448
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249392668151
+			"yaw": -1.80245970795913
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.8024943900493
+			"yaw": -1.80245982472257
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249391631081
+			"yaw": -1.80245994406766
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.8024943899241
+			"yaw": -1.80246006608098
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249390547106
+			"yaw": -1.80246019085302
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249438979318
+			"yaw": -1.80246031847842
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249389412971
+			"yaw": -1.80246044905619
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249438965613
+			"yaw": -1.80246058268997
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249388225111
+			"yaw": -1.80246071948832
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.8024943895125
+			"yaw": -1.80246085956498
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249386979616
+			"yaw": -1.80246100303925
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249438936183
+			"yaw": -1.80246115003624
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249385672188
+			"yaw": -1.80246130068732
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249438920357
+			"yaw": -1.80246145513044
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249384298089
+			"yaw": -1.80246161351061
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249438903713
+			"yaw": -1.80246177598032
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249382852086
+			"yaw": -1.80246194270003
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249438886187
+			"yaw": -1.8024621138387
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249381328384
+			"yaw": -1.80246228957441
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249438867706
+			"yaw": -1.80246247009487
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249379720546
+			"yaw": -1.80246265559822
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.8024943884819
+			"yaw": -1.80246284629364
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249378021406
+			"yaw": -1.80246302447262
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249438827551
+			"yaw": -1.80246322597
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249376222961
+			"yaw": -1.80246343335427
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249438805687
+			"yaw": -1.80246364688723
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249374316242
+			"yaw": -1.80246386684646
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249438782487
+			"yaw": -1.80246409352648
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249372291167
+			"yaw": -1.80246432724011
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249438757823
+			"yaw": -1.80246456831985
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249370136365
+			"yaw": -1.80246481711955
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249438731555
+			"yaw": -1.80246507401604
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249367838957
+			"yaw": -1.80246533941111
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249438703518
+			"yaw": -1.80246561373358
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249365384302
+			"yaw": -1.80246589744161
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.8024943867353
+			"yaw": -1.80246619102523
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249362755683
+			"yaw": -1.80246649500924
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249438641377
+			"yaw": -1.80246680995625
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249359933927
+			"yaw": -1.80246713647023
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249438606818
+			"yaw": -1.8024674752003
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249356896938
+			"yaw": -1.80246782684512
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249438569572
+			"yaw": -1.80246819215764
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249353619111
+			"yaw": -1.80246857195051
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249438529312
+			"yaw": -1.80246896710209
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249350070618
+			"yaw": -1.80246937856327
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249438485657
+			"yaw": -1.80246980736508
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249346216488
+			"yaw": -1.80247025462731
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.8024943843816
+			"yaw": -1.80247072156831
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249342015456
+			"yaw": -1.80247120951604
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.8024943838629
+			"yaw": -1.80247171992069
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249337418481
+			"yaw": -1.8024722543691
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249438329412
+			"yaw": -1.80247281460119
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249332366817
+			"yaw": -1.80247340252893
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249438266767
+			"yaw": -1.80247402025811
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249326789495
+			"yaw": -1.80247467011356
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249438197428
+			"yaw": -1.80247535466838
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249320599964
+			"yaw": -1.80247607677799
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249438120264
+			"yaw": -1.80247683961995
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.8024931369157
+			"yaw": -1.80247764674068
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249438033869
+			"yaw": -1.80247850211062
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249305931358
+			"yaw": -1.80247933234089
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249437936484
+			"yaw": -1.80248021535677
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249297151429
+			"yaw": -1.80248115635769
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249437825866
+			"yaw": -1.80248216124908
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249287136658
+			"yaw": -1.80248323676652
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249437699124
+			"yaw": -1.8024843906268
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249275606831
+			"yaw": -1.80248563171346
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249437552455
+			"yaw": -1.80248697030587
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249262190014
+			"yaw": -1.80248841836467
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249437380758
+			"yaw": -1.80248998989009
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249246381679
+			"yaw": -1.8024917013761
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249437177028
+			"yaw": -1.80249357239152
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249227479837
+			"yaw": -1.80249562633154
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.8024943693138
+			"yaw": -1.80249348776603
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.8024920447796
+			"yaw": -1.80249575969214
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249436629394
+			"yaw": -1.80249338374933
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249175879747
+			"yaw": -1.80249592546809
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249436249175
+			"yaw": -1.80249325281401
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249139359957
+			"yaw": -1.80249613711301
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249435755803
+			"yaw": -1.80249308295754
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249091098098
+			"yaw": -1.80249641672093
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249435089932
+			"yaw": -1.80249285379606
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249024346287
+			"yaw": -1.80249680328952
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249434141933
+			"yaw": -1.80249252770134
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80248925961046
+			"yaw": -1.80249737270898
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249432684304
+			"yaw": -1.80249202667408
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80248766473285
+			"yaw": -1.80249829490251
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.80249430155022
+			"yaw": -1.80249115835625
 		},
 		"ticks": 1
 	},
@@ -3967,7 +3946,7 @@
 			"jump": false,
 			"jump_held": true,
 			"sprint": false,
-			"yaw": -1.57034597084825
+			"yaw": -1.57037277177785
 		},
 		"ticks": 57
 	},
@@ -3977,7 +3956,7 @@
 			"jump": true,
 			"jump_held": true,
 			"sprint": false,
-			"yaw": -1.57034597084825
+			"yaw": -1.57037277177785
 		},
 		"ticks": 1
 	},
@@ -3987,7 +3966,7 @@
 			"jump": false,
 			"jump_held": true,
 			"sprint": false,
-			"yaw": -1.57034597084825
+			"yaw": -1.57037277177785
 		},
 		"ticks": 75
 	},
@@ -4002,18 +3981,18 @@
 			"forward": true,
 			"jump": false,
 			"jump_held": true,
-			"sprint": false,
-			"yaw": -1.97892929420218
+			"sprint": true,
+			"yaw": -1.97890736240715
 		},
-		"ticks": 75
+		"ticks": 18
 	},
 	{
 		"controls": {
 			"forward": true,
 			"jump": true,
 			"jump_held": true,
-			"sprint": false,
-			"yaw": -1.97892929420218
+			"sprint": true,
+			"yaw": -1.97890736240715
 		},
 		"ticks": 1
 	},
@@ -4022,10 +4001,10 @@
 			"forward": true,
 			"jump": false,
 			"jump_held": true,
-			"sprint": false,
-			"yaw": -1.97892929420218
+			"sprint": true,
+			"yaw": -1.97890736240715
 		},
-		"ticks": 62
+		"ticks": 65
 	},
 	{
 		"controls": {
@@ -4039,9 +4018,9 @@
 			"jump": false,
 			"jump_held": true,
 			"sprint": true,
-			"yaw": -1.11679290503045
+			"yaw": -1.04674239820956
 		},
-		"ticks": 21
+		"ticks": 15
 	},
 	{
 		"controls": {
@@ -4049,7 +4028,7 @@
 			"jump": true,
 			"jump_held": true,
 			"sprint": true,
-			"yaw": -1.11679290503045
+			"yaw": -1.04674239820956
 		},
 		"ticks": 1
 	},
@@ -4059,7 +4038,7 @@
 			"jump": false,
 			"jump_held": true,
 			"sprint": true,
-			"yaw": -1.11679290503045
+			"yaw": -1.04674239820956
 		},
 		"ticks": 65
 	},
@@ -4075,9 +4054,9 @@
 			"jump": false,
 			"jump_held": true,
 			"sprint": false,
-			"yaw": -1.06909153423472
+			"yaw": -1.05058097164495
 		},
-		"ticks": 33
+		"ticks": 36
 	},
 	{
 		"controls": {
@@ -4085,7 +4064,7 @@
 			"jump": true,
 			"jump_held": true,
 			"sprint": false,
-			"yaw": -1.06909153423472
+			"yaw": -1.05058097164495
 		},
 		"ticks": 1
 	},
@@ -4095,7 +4074,7 @@
 			"jump": false,
 			"jump_held": true,
 			"sprint": false,
-			"yaw": -1.06909153423472
+			"yaw": -1.05058097164495
 		},
 		"ticks": 93
 	},
@@ -4111,7 +4090,7 @@
 			"jump": false,
 			"jump_held": true,
 			"sprint": true,
-			"yaw": -2.02318945636667
+			"yaw": -2.03029436065155
 		},
 		"ticks": 30
 	},
@@ -4121,7 +4100,7 @@
 			"jump": true,
 			"jump_held": true,
 			"sprint": true,
-			"yaw": -2.02318945636667
+			"yaw": -2.03029436065155
 		},
 		"ticks": 1
 	},
@@ -4131,7 +4110,7 @@
 			"jump": false,
 			"jump_held": true,
 			"sprint": true,
-			"yaw": -2.02318945636667
+			"yaw": -2.03029436065155
 		},
 		"ticks": 55
 	},
@@ -4147,7 +4126,7 @@
 			"jump": false,
 			"jump_held": true,
 			"sprint": true,
-			"yaw": -2.07284482598991
+			"yaw": -2.07268247591614
 		},
 		"ticks": 15
 	},
@@ -4157,7 +4136,7 @@
 			"jump": true,
 			"jump_held": true,
 			"sprint": true,
-			"yaw": -2.07284482598991
+			"yaw": -2.07268247591614
 		},
 		"ticks": 1
 	},
@@ -4167,7 +4146,7 @@
 			"jump": false,
 			"jump_held": true,
 			"sprint": true,
-			"yaw": -2.07284482598991
+			"yaw": -2.07268247591614
 		},
 		"ticks": 60
 	},
@@ -4183,7 +4162,7 @@
 			"jump": false,
 			"jump_held": true,
 			"sprint": true,
-			"yaw": -1.16523774045948
+			"yaw": -1.01154969377189
 		},
 		"ticks": 18
 	},
@@ -4193,7 +4172,7 @@
 			"jump": true,
 			"jump_held": true,
 			"sprint": true,
-			"yaw": -1.16523774045948
+			"yaw": -1.01154969377189
 		},
 		"ticks": 1
 	},
@@ -4203,7 +4182,7 @@
 			"jump": false,
 			"jump_held": true,
 			"sprint": true,
-			"yaw": -1.16523774045948
+			"yaw": -1.01154969377189
 		},
 		"ticks": 69
 	},
@@ -4216,126 +4195,210 @@
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.03109415675566
+			"yaw": -1.92937629465855
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.02913625458878
+			"yaw": -1.9371473274463
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.02734915445592
+			"yaw": -1.94428561836939
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.02574086528801
+			"yaw": -1.95079571474233
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.02431815884931
+			"yaw": -1.95667299033974
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.02310334003686
+			"yaw": -1.96190689137423
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.02212257685278
+			"yaw": -1.96646767453447
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.02141978207775
+			"yaw": -1.97031636451455
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.02105739830915
+			"yaw": -1.97339819635175
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.02105707818326
+			"yaw": -1.97563294655235
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.02105670758482
+			"yaw": -1.97691940478489
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.02105627355572
+			"yaw": -1.97711032636817
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.02105575828696
+			"yaw": -1.97710931858322
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.02105513661435
+			"yaw": -1.97710821681966
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.02105437178416
+			"yaw": -1.97710700728895
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.02105340791297
+			"yaw": -1.97710567336643
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.02105215567999
+			"yaw": -1.97710419482263
 		},
 		"ticks": 1
 	},
 	{
 		"controls": {
 			"forward": true,
-			"yaw": -1.02105046291947
+			"yaw": -1.97710254679018
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.97710069835386
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.97710384532978
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.97710183089054
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.97709951684288
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.97710332737046
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.97710073975898
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.9771053968083
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.97710248045501
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.97709887361317
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.97710515608159
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.97710084538454
+		},
+		"ticks": 1
+	},
+	{
+		"controls": {
+			"forward": true,
+			"yaw": -1.97709495198217
 		},
 		"ticks": 1
 	},

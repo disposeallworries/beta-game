@@ -84,9 +84,10 @@ func tick(dt: float) -> void:
 		target_pose = _euler_pose([-0.15, 0, 0, -2.6, 0, -0.7, -2.6, 0, 0.7, -0.9, 0, 0, 0.5, 0, 0])
 	elif moving and player.drop_time > 0 and air:
 		target_pose = _euler_pose([0.1, 0, 0, -0.3, 0, -1.5, -0.3, 0, 1.5, 0.3, 0, 0, -0.3, 0, 0])
+	var pose_rate: float = 30.0 if player.state == "climb" and player.quick_vault else 16.0
 	if not target_pose.is_empty():
 		for i in range(5):
-			_pose[i] = target_pose[i] if _pose_weight < 0.02 else _pose[i].slerp(target_pose[i], 1.0 - exp(-16.0 * dt))
+			_pose[i] = target_pose[i] if _pose_weight < 0.02 else _pose[i].slerp(target_pose[i], 1.0 - exp(-pose_rate * dt))
 	_pose_weight = lerpf(_pose_weight, 0.0 if target_pose.is_empty() else 1.0, 1.0 - exp(-14.0 * dt))
 	if _pose_weight > 0.01:
 		for i in range(5):

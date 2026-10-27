@@ -25,6 +25,7 @@ func _run() -> void:
 	await process_frame
 	_test_course()
 	_test_animation()
+	_test_vault_animation()
 	_test_input_and_timer()
 	_test_checkpoints_and_respawn()
 	_test_finish_and_restart()
@@ -87,6 +88,33 @@ func _test_animation() -> void:
 	for i in 30:
 		game.visual.tick(STEP)
 	_check(game.visual._weights[3] > 0.9, "Airborne movement blends into original jump animation")
+	game.respawn()
+
+
+func _test_vault_animation() -> void:
+	var player: ParkourPlayer = game.player
+	var original_boxes: Array[AABB] = player.boxes
+	var fixture: Array[AABB] = [AABB(Vector3(-2, 0, -5), Vector3(4, 3, 4))]
+	player.boxes = fixture
+	player.respawn(Vector3(0, 1.9, -0.64))
+	player.ledge_cooldown = 0.0
+	player.velocity = Vector3(0, 0, -10)
+	player.simulate(STEP, {"forward": true})
+	game.visual.tick(STEP)
+	player.simulate(STEP, {"forward": true})
+	_check(player.state == "climb" and player.quick_vault, "Real scene player begins a quick follow-through vault")
+	var contact_pose_seen: bool = false
+	var finite_poses: bool = true
+	for i in 30:
+		player.simulate(STEP, {"forward": true})
+		game.visual.tick(STEP)
+		contact_pose_seen = contact_pose_seen or game.visual._pose_weight > 0.7
+		for bone: Node3D in game.visual.bones:
+			finite_poses = finite_poses and bone.transform.is_finite()
+	_check(contact_pose_seen and finite_poses, "Fast vault animates original limbs through valid contact poses")
+	_check(player.state == "move" and player.grounded and player.velocity.z < -10.0, "Animated vault exits onto the platform with momentum")
+	_check(game.visual.position.is_equal_approx(player.position), "Character visual follows the fast vault without positional lag")
+	player.boxes = original_boxes
 	game.respawn()
 
 
