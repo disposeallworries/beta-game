@@ -40,10 +40,10 @@ func emit_dust(at: Vector3, count: int, speed: float) -> void:
 
 func tick(dt: float, player: ParkourPlayer) -> void:
 	var speed: float = Vector2(player.velocity.x, player.velocity.z).length()
-	if player.grounded and speed > 8.0:
+	if player.grounded and speed > 8.0 * ParkourPlayer.MOVEMENT_SCALE:
 		footstep_time -= dt
 		if footstep_time < 0.0:
-			footstep_time = 0.08 if speed > 12 else 0.14
+			footstep_time = 0.08 if speed > 12.0 * ParkourPlayer.MOVEMENT_SCALE else 0.14
 			emit_dust(player.position, 1, 0.8)
 	for particle in particles:
 		var life: float = particle["life"]

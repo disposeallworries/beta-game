@@ -11,12 +11,16 @@ const RADIUS: float = 0.35
 const HEIGHT: float = 1.15
 const GRAVITY: float = 30.0
 const JUMP_VELOCITY: float = 10.5
+const MOVEMENT_SCALE: float = 0.6
+const WALK_SPEED: float = 3.12
+const SPRINT_BASE: float = 5.7
+const SPRINT_MAX: float = 7.8
 # Follow through immediately to vault instead of settling into a slow pull-up.
 const QUICK_VAULT_WINDOW: float = 0.22
-const QUICK_VAULT_DURATION: float = 0.24
-const ASSIST_VAULT_DURATION: float = 0.18
-const VAULT_BOOST: float = 1.5
-const VAULT_MAX_SPEED: float = 14.5
+const QUICK_VAULT_DURATION: float = 0.48
+const ASSIST_VAULT_DURATION: float = 0.32
+const VAULT_BOOST: float = 0.9
+const VAULT_MAX_SPEED: float = 8.7
 const NORMAL_CLIMB_DURATION: float = 0.95
 
 var boxes: Array[AABB] = []
@@ -53,6 +57,7 @@ var jump_held: bool = false
 var climb_start: Vector3 = Vector3.ZERO
 var climb_end: Vector3 = Vector3.ZERO
 var quick_vault: bool = false
+var assisted_vault: bool = false
 var climb_duration: float = NORMAL_CLIMB_DURATION
 var ledge_entry_speed: float = 0.0
 var climb_exit_speed: float = 0.0
@@ -128,7 +133,7 @@ func _move_step(dt: float, controls: Dictionary, direction: Vector3) -> void:
 		sprint_time = minf(sprint_time + dt, 3.0)
 	elif grounded:
 		sprint_time = 0.0
-	var speed: float = 9.5 + sprint_time / 3.0 * 3.5 if sprint else 5.2
+	var speed: float = lerpf(SPRINT_BASE, SPRINT_MAX, sprint_time / 3.0) if sprint else WALK_SPEED
 	if grounded:
 		coyote_time = 0.12
 		last_wall = -1
@@ -137,13 +142,14 @@ func _move_step(dt: float, controls: Dictionary, direction: Vector3) -> void:
 	var target: Vector3 = direction * speed
 	var acceleration: float
 	if grounded:
-		acceleration = 9.0 if initial_speed > speed + 0.5 and has_move_input else (48.0 if has_move_input else 60.0)
+		acceleration = 9.0 if initial_speed > speed + 0.5 * MOVEMENT_SCALE and has_move_input else (48.0 if has_move_input else 60.0)
 	else:
 		acceleration = 2.0 if control_lock > 0.0 else (18.0 if has_move_input else 2.5)
 		if has_move_input:
 			target = direction * maxf(speed, initial_speed)
 		else:
 			target = horizontal
+	acceleration *= MOVEMENT_SCALE
 	horizontal = horizontal.move_toward(target, acceleration * dt)
 	velocity.x = horizontal.x
 	velocity.z = horizontal.z
@@ -160,7 +166,7 @@ func _move_step(dt: float, controls: Dictionary, direction: Vector3) -> void:
 	if velocity.y <= 0.0:
 		jump_held = false
 	velocity.y = maxf(velocity.y - GRAVITY * dt, -35.0)
-	if horizontal.length() > 0.5 and control_lock <= 0.0:
+	if horizontal.length() > 0.5 * MOVEMENT_SCALE and control_lock <= 0.0:
 		yaw_target = atan2(velocity.x, velocity.z)
 	var pre_vertical_speed: float = velocity.y
 	var pre_speed: float = horizontal.length()
@@ -173,12 +179,12 @@ func _move_step(dt: float, controls: Dictionary, direction: Vector3) -> void:
 		# Use approach momentum from before collision; the wall solver may have
 		# already zeroed its normal component on this tick.
 		var approach := direction if has_move_input else horizontal
-		if approach.length() > 0.5:
+		if approach.length() > 0.5 * MOVEMENT_SCALE:
 			if absf(approach.x) > absf(approach.z):
 				approach = Vector3(signf(approach.x), 0.0, 0.0)
 			else:
 				approach = Vector3(0.0, 0.0, signf(approach.z))
-			var probe: Vector3 = position + approach * (RADIUS + 0.3)
+			var probe: Vector3 = position + approach * (RADIUS + 0.18)
 			for box in boxes:
 				if probe.x <= box.position.x or probe.x >= box.end.x or probe.z <= box.position.z or probe.z >= box.end.z:
 					continue
@@ -188,14 +194,14 @@ func _move_step(dt: float, controls: Dictionary, direction: Vector3) -> void:
 				if height_to_top > 0.0 and height_to_top <= HEIGHT * 0.5:
 					if _try_assisted_vault(box, approach, pre_speed):
 						break
-				elif velocity.y < 2.0 and height_to_top > 0.7 and height_to_top < 1.65:
+				elif velocity.y < 2.0 and height_to_top > 0.7 and height_to_top < 1.25:
 					_grab(box, approach, pre_speed)
 					break
 	if state == "move" and not grounded and not hit.is_empty():
 		var index: int = hit["index"]
 		var normal: Vector3 = hit["normal"]
 		var impact_speed: float = hit["speed"]
-		if index != last_wall and velocity.y < 3.0 and boxes[index].end.y - position.y > 1.8 and (impact_speed > 2.5 or -direction.dot(normal) > 0.3):
+		if index != last_wall and velocity.y < 3.0 and boxes[index].end.y - position.y > 1.8 and (impact_speed > 2.5 * MOVEMENT_SCALE or -direction.dot(normal) > 0.3):
 			state = "wall"
 			wall_normal = normal
 			wall_box = index
@@ -213,8 +219,8 @@ func _move_step(dt: float, controls: Dictionary, direction: Vector3) -> void:
 func _wall_step(dt: float, direction: Vector3, drop: bool) -> void:
 	wall_time += dt
 	wall_tangent *= exp(-1.2 * dt)
-	velocity.x = -wall_normal.x * 1.5 + wall_tangent.x
-	velocity.z = -wall_normal.z * 1.5 + wall_tangent.z
+	velocity.x = -wall_normal.x * 1.5 * MOVEMENT_SCALE + wall_tangent.x
+	velocity.z = -wall_normal.z * 1.5 * MOVEMENT_SCALE + wall_tangent.z
 	velocity.y = maxf(velocity.y - (5.0 if wall_time < 0.3 else 10.0) * dt, -1.0 if wall_time < 0.3 else -2.8)
 	_collide(dt)
 	if hit.is_empty() or hit["index"] != wall_box:
@@ -226,10 +232,11 @@ func _wall_step(dt: float, direction: Vector3, drop: bool) -> void:
 	else:
 		wall_away_time = 0.0
 	if jump_buffer > 0.0:
-		var strength: float = minf(20.0, maxf(8.0, wall_speed * 0.95) + 2.0)
-		var horizontal: Vector3 = wall_normal * strength + wall_tangent * 0.5 + direction * 2.0
-		if horizontal.length() > 20.0:
-			horizontal = horizontal.normalized() * 20.0
+		# Keep the original vertical wall-jump bonus while slowing horizontal travel.
+		var strength: float = minf(20.0, maxf(8.0, wall_speed / MOVEMENT_SCALE * 0.95) + 2.0)
+		var horizontal: Vector3 = wall_normal * strength * MOVEMENT_SCALE + wall_tangent * 0.5 + direction * 2.0 * MOVEMENT_SCALE
+		if horizontal.length() > 20.0 * MOVEMENT_SCALE:
+			horizontal = horizontal.normalized() * 20.0 * MOVEMENT_SCALE
 		velocity = horizontal
 		velocity.y = JUMP_VELOCITY + minf((strength - 8.0) * 0.3, 2.5)
 		jump_buffer = 0.0
@@ -245,8 +252,8 @@ func _wall_step(dt: float, direction: Vector3, drop: bool) -> void:
 	elif grounded or wall_no_contact > 0.1 or drop or wall_away_time > 0.15:
 		state = "move"
 		last_wall = wall_box
-		velocity.x = wall_normal.x * 2.0 + wall_tangent.x
-		velocity.z = wall_normal.z * 2.0 + wall_tangent.z
+		velocity.x = wall_normal.x * 2.0 * MOVEMENT_SCALE + wall_tangent.x
+		velocity.z = wall_normal.z * 2.0 * MOVEMENT_SCALE + wall_tangent.z
 		if drop:
 			drop_time = 0.4
 
@@ -276,7 +283,7 @@ func _hang_step(dt: float, controls: Dictionary, drop: bool) -> void:
 			_begin_climb(finish, fast, QUICK_VAULT_DURATION if fast else NORMAL_CLIMB_DURATION)
 
 
-func _begin_climb(finish: Vector3, fast: bool, duration: float) -> void:
+func _begin_climb(finish: Vector3, fast: bool, duration: float, assisted: bool = false) -> void:
 	state = "climb"
 	grounded = false
 	climb_progress = 0.0
@@ -284,7 +291,8 @@ func _begin_climb(finish: Vector3, fast: bool, duration: float) -> void:
 	climb_end = finish
 	climb_duration = duration
 	quick_vault = fast
-	climb_exit_speed = clampf(ledge_entry_speed + VAULT_BOOST, 5.2, VAULT_MAX_SPEED) if fast else 0.0
+	assisted_vault = assisted
+	climb_exit_speed = clampf(ledge_entry_speed + VAULT_BOOST, WALK_SPEED, VAULT_MAX_SPEED) if fast else 0.0
 	velocity = Vector3.ZERO
 	jump_buffer = 0.0
 	jump_held = false
@@ -300,18 +308,12 @@ func _climb_step(dt: float) -> void:
 		return
 	climb_progress += dt / climb_duration
 	var progress: float = minf(climb_progress, 1.0)
-	if quick_vault:
-		# Rise clear of the lip before crossing it. This short arc uses the same
-		# contact-pose progress as the slow climb, without its pause at the top.
-		position.y = lerpf(climb_start.y, climb_end.y, smoothstep(0.0, 0.5, progress))
-		var across: float = smoothstep(0.5, 1.0, progress)
-		position.x = lerpf(climb_start.x, climb_end.x, across)
-		position.z = lerpf(climb_start.z, climb_end.z, across)
-	else:
-		var forward_ease: float = smoothstep(0.42, 0.9, progress)
-		position.y = climb_start.y + (float(ledge["top"]) - 0.25 - climb_start.y) * smoothstep(0.0, 0.4, progress) + 0.25 * smoothstep(0.55, 0.9, progress)
-		position.x = lerpf(climb_start.x, climb_end.x, forward_ease)
-		position.z = lerpf(climb_start.z, climb_end.z, forward_ease)
+	# Pull vertically with planted hands, then move across only after the feet
+	# clear the lip. Normal and quick climbs share the same collision-safe path.
+	position.y = lerpf(climb_start.y, climb_end.y, smoothstep(0.0, 0.7, progress))
+	var across: float = smoothstep(0.7, 1.0, progress)
+	position.x = lerpf(climb_start.x, climb_end.x, across)
+	position.z = lerpf(climb_start.z, climb_end.z, across)
 	if progress >= 1.0:
 		position = climb_end
 		state = "move"
@@ -330,9 +332,9 @@ func _grab(box: AABB, approach: Vector3, entry_speed: float = 0.0) -> void:
 	ledge_entry_speed = entry_speed
 	velocity = Vector3.ZERO
 	hang_time = 0.0
-	position = _ledge_outside(box, approach)
-	position.y = box.end.y - 1.1
-	ledge_front = position.dot(approach) + RADIUS
+	# A catch freezes the physical position reached by this tick. The hands
+	# reach the actual lip; the body never teleports to a canned hanging pose.
+	ledge_front = _ledge_outside(box, approach).dot(approach) + RADIUS
 	yaw = atan2(approach.x, approach.z)
 	yaw_target = yaw
 
@@ -348,7 +350,7 @@ func _try_assisted_vault(box: AABB, approach: Vector3, entry_speed: float) -> bo
 	ledge_front = outside.dot(approach) + RADIUS
 	hang_time = 0.0
 	yaw_target = atan2(approach.x, approach.z)
-	_begin_climb(finish, true, ASSIST_VAULT_DURATION)
+	_begin_climb(finish, true, ASSIST_VAULT_DURATION, true)
 	return true
 
 
@@ -384,6 +386,7 @@ func _body_sweep_clear(from: Vector3, to: Vector3) -> bool:
 
 func _reset_vault() -> void:
 	quick_vault = false
+	assisted_vault = false
 	climb_duration = NORMAL_CLIMB_DURATION
 	ledge_entry_speed = 0.0
 	climb_exit_speed = 0.0

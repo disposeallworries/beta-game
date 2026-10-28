@@ -111,7 +111,7 @@ func update_stats(checkpoint_name: String, elapsed: float, speed: float) -> void
 func show_intro() -> void:
 	message_kind = "intro"
 	message_heading.text = "Click to play"
-	message_detail.text = "Reach the gold platform"
+	message_detail.text = "Follow the gold arrows to Sunset garden"
 	message_panel.show()
 
 

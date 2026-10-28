@@ -149,7 +149,7 @@ func restart() -> void:
 	hud.hide_message()
 
 func _on_landed(fall_speed: float) -> void:
-	follow_camera.dip = minf(0.45, fall_speed * 0.022)
+	follow_camera.dip = minf(0.2, fall_speed * 0.012)
 
 func _notification(what: int) -> void:
 	if what == NOTIFICATION_APPLICATION_FOCUS_OUT:

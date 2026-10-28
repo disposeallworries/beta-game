@@ -38,18 +38,32 @@ func _run() -> void:
 
 
 func _test_course() -> void:
-	_check(game.course.boxes.size() == 19, "All 19 original collision bounds exist")
-	_check(game.course.CHECKPOINTS.size() == 6, "All six original checkpoints exist")
-	var first: AABB = game.course.boxes[0]
-	_check(first.position.is_equal_approx(Vector3(-9, -2, -9)) and first.size.is_equal_approx(Vector3(18, 2, 18)), "Start platform exact bounds")
-	var last: AABB = game.course.boxes[18]
-	_check(last.position.is_equal_approx(Vector3(43, 11.1, -62)) and last.size.is_equal_approx(Vector3(10, 1.5, 10)), "Gold finish exact bounds")
-	var shaft: AABB = game.course.boxes[7]
-	_check(shaft.position.is_equal_approx(Vector3(-5, 5.4, -53)) and shaft.end.is_equal_approx(Vector3(-2, 12.6, -45)), "Shaft wall exact bounds")
+	var box_count: int = game.course.boxes.size()
+	var checkpoint_count: int = game.course.CHECKPOINTS.size()
+	_check(box_count >= 45, "Expanded garden has at least 45 collision platforms and walls")
+	_check(checkpoint_count >= 8, "Expanded garden has eight or more distinct checkpoint zones")
+	_check(game.course.ROUTE_TARGETS.size() >= 40, "Ordered route spans at least 40 walkable targets")
+	var footprint: AABB = game.course.boxes[0]
+	for bounds: AABB in game.course.boxes:
+		footprint = footprint.merge(bounds)
+	_check(footprint.size.x >= 100 and footprint.size.z >= 105 and footprint.end.y >= 17.5, "Garden winds across a larger two-axis footprint with elevated terraces")
+	var route_length: float = 0.0
+	var previous_index: int = -1
+	var route_indices: Dictionary = {}
+	for index: int in game.course.ROUTE_TARGETS:
+		_check(index >= 0 and index < box_count and not route_indices.has(index), "Route target %d is a unique valid platform" % index)
+		route_indices[index] = true
+		if previous_index >= 0:
+			var from: Vector3 = game.course.boxes[previous_index].get_center()
+			var to: Vector3 = game.course.boxes[index].get_center()
+			route_length += Vector2(to.x - from.x, to.z - from.z).length()
+		previous_index = index
+	_check(route_length > 210.0, "Winding route offers over 210 meters of horizontal traversal")
 	var bodies: int = 0
 	var shapes: int = 0
 	var flag_found: bool = false
 	var markers: int = 0
+	var finish: Vector3 = game.course.CHECKPOINTS[checkpoint_count - 1]["position"]
 	for node: Node in game.course.get_children():
 		if node is StaticBody3D:
 			bodies += 1
@@ -59,12 +73,32 @@ func _test_course() -> void:
 		if node.name.begins_with("Checkpoint"):
 			markers += 1
 		if node is MeshInstance3D and node.mesh is BoxMesh:
-			if node.position.is_equal_approx(Vector3(48.7, 15.4, -57)):
-				flag_found = node.mesh.size.is_equal_approx(Vector3(1.4, 0.8, 0.05))
-	_check(bodies == 19 and shapes == 19, "Native static collision bodies match all original boxes")
-	_check(markers == 5, "Five visible checkpoint markers exist")
-	_check(flag_found, "Original finish flag geometry and position exist")
+			if node.position.is_equal_approx(finish + Vector3(.7, 2.8, 0)):
+				flag_found = node.mesh.size.is_equal_approx(Vector3(1.4, .8, .05))
+	_check(bodies == box_count and shapes == box_count, "Native static collision bodies match every solver bound")
+	_check(markers == checkpoint_count - 1, "Every non-start checkpoint has a visible marker")
+	_check(flag_found, "Finish flag follows the final checkpoint's new garden location")
 	_check(game.course.sun.shadow_enabled, "Directional light casts shadows")
+	_check(game.course.has_node("GardenScenery"), "Garden scenery is separate from gameplay collision geometry")
+	var checkpoint_names: Dictionary = {}
+	for i in checkpoint_count:
+		var at: Vector3 = game.course.CHECKPOINTS[i]["position"]
+		var zone_name: String = game.course.CHECKPOINTS[i]["name"]
+		_check(not zone_name.is_empty() and not checkpoint_names.has(zone_name), "Checkpoint %d has a unique named garden zone" % i)
+		checkpoint_names[zone_name] = true
+		var supported: bool = false
+		for bounds: AABB in game.course.boxes:
+			if absf(at.y - bounds.end.y) < 0.001 and at.x > bounds.position.x + .35 and at.x < bounds.end.x - .35 and at.z > bounds.position.z + .35 and at.z < bounds.end.z - .35:
+				supported = true
+		_check(supported and not game.player.blocked(at + Vector3.UP * .02), "Checkpoint %d is supported with clear standing room" % i)
+		game.player.respawn(at)
+		for frame in 8:
+			game.player.simulate(STEP, {})
+		_check(game.player.grounded and game.player.position.distance_to(at) < .03, "Checkpoint %d remains safely grounded under actual player physics" % i)
+		if i > 0:
+			var marker: MeshInstance3D = game.course.get_node("Checkpoint%d" % i)
+			_check(marker.position.distance_to(at) < .1, "Checkpoint %d marker aligns with spawn surface" % i)
+	game.respawn()
 
 
 func _test_animation() -> void:
@@ -79,7 +113,7 @@ func _test_animation() -> void:
 	var before: Vector3 = rig.scale
 	game.visual.tick(0.2)
 	_check(not rig.scale.is_equal_approx(before), "Idle keyframes visibly breathe the rig")
-	game.player.velocity = Vector3(0, 0, -13)
+	game.player.velocity = Vector3(0, 0, -7.8)
 	for i in 30:
 		game.visual.tick(STEP)
 	_check(game.visual._weights[2] > 0.9, "Sprint blends into original run animation")
@@ -98,22 +132,42 @@ func _test_vault_animation() -> void:
 	player.boxes = fixture
 	player.respawn(Vector3(0, 1.9, -0.64))
 	player.ledge_cooldown = 0.0
-	player.velocity = Vector3(0, 0, -10)
+	player.velocity = Vector3(0, 0, -6.0)
 	player.simulate(STEP, {"forward": true})
+	_check(player.state == "hang" and absf(player.position.y - 1.9) < .01, "Ledge grab preserves the body's actual height without a pop")
 	game.visual.tick(STEP)
 	player.simulate(STEP, {"forward": true})
 	_check(player.state == "climb" and player.quick_vault, "Real scene player begins a quick follow-through vault")
 	var contact_pose_seen: bool = false
 	var finite_poses: bool = true
-	for i in 30:
+	var vault_ticks: int = 0
+	for i in 70:
 		player.simulate(STEP, {"forward": true})
+		vault_ticks += 1
 		game.visual.tick(STEP)
 		contact_pose_seen = contact_pose_seen or game.visual._pose_weight > 0.7
 		for bone: Node3D in game.visual.bones:
 			finite_poses = finite_poses and bone.transform.is_finite()
+		if player.state == "move":
+			break
 	_check(contact_pose_seen and finite_poses, "Fast vault animates original limbs through valid contact poses")
-	_check(player.state == "move" and player.grounded and player.velocity.z < -10.0, "Animated vault exits onto the platform with momentum")
+	_check(player.state == "move" and player.grounded and player.velocity.z < -6.0, "Animated vault exits onto the platform with momentum at reduced movement speed")
+	_check(absf(vault_ticks * STEP - .48) <= STEP, "Quick vault gives contact animation its full 0.48-second duration")
 	_check(game.visual.position.is_equal_approx(player.position), "Character visual follows the fast vault without positional lag")
+	player.respawn(Vector3(0, 2.55, -.64))
+	player.ledge_cooldown = 0.0
+	player.velocity = Vector3(0, 0, -6.0)
+	player.simulate(STEP, {"forward": true})
+	_check(player.state == "climb" and player.assisted_vault and absf(player.position.y - 2.55) < .01, "Half-height ledge assist begins smoothly from actual feet position")
+	var assist_ticks: int = 0
+	for i in 50:
+		player.simulate(STEP, {"forward": true})
+		game.visual.tick(STEP)
+		assist_ticks += 1
+		if player.state == "move":
+			break
+	_check(player.grounded and player.state == "move" and absf(player.position.y - 3.0) < .001, "Assisted vault exits standing on the platform")
+	_check(absf(assist_ticks * STEP - .32) <= STEP and not player.assisted_vault, "Assisted vault finishes in 0.32 seconds and clears its contact state")
 	player.boxes = original_boxes
 	game.respawn()
 
@@ -138,38 +192,41 @@ func _test_input_and_timer() -> void:
 
 
 func _test_checkpoints_and_respawn() -> void:
+	var skip_index: int = mini(3, game.course.CHECKPOINTS.size() - 2)
+	var penultimate: int = game.course.CHECKPOINTS.size() - 2
 	game.player.position = game.course.CHECKPOINTS[1]["position"]
 	game.player.grounded = false
 	game.update_checkpoints()
 	_check(game.checkpoint_index == 0, "Flying over checkpoint does not activate it")
 	game.player.grounded = true
 	game.update_checkpoints()
-	_check(game.checkpoint_index == 1, "Grounded player activates ledge checkpoint")
-	game.player.position = game.course.CHECKPOINTS[3]["position"]
+	_check(game.checkpoint_index == 1, "Grounded player activates first route checkpoint")
+	game.player.position = game.course.CHECKPOINTS[skip_index]["position"]
 	game.update_checkpoints()
-	_check(game.checkpoint_index == 3, "Later checkpoints can skip earlier checkpoints as in source")
+	_check(game.checkpoint_index == skip_index, "Later checkpoints can skip earlier checkpoints as in source")
 	game.elapsed = 12.3
 	game.player.position = Vector3(0, 30, 0)
 	game.player.velocity = Vector3(4, -6, 2)
 	_key(KEY_R)
-	_check(game.player.position.is_equal_approx(game.course.CHECKPOINTS[3]["position"]) and game.player.velocity.is_zero_approx(), "R restores active checkpoint and clears velocity")
-	_check(game.checkpoint_index == 3 and is_equal_approx(game.elapsed, 12.3), "Respawn preserves checkpoint and time")
+	_check(game.player.position.is_equal_approx(game.course.CHECKPOINTS[skip_index]["position"]) and game.player.velocity.is_zero_approx(), "R restores active checkpoint and clears velocity")
+	_check(game.checkpoint_index == skip_index and is_equal_approx(game.elapsed, 12.3), "Respawn preserves checkpoint and time")
 	game.player.position = Vector3(0, -15, 4)
 	game._physics_process(STEP)
-	_check(game.player.position.is_equal_approx(game.course.CHECKPOINTS[3]["position"]), "Falling below death plane automatically respawns")
+	_check(game.player.position.is_equal_approx(game.course.CHECKPOINTS[skip_index]["position"]), "Falling below death plane automatically respawns")
 	_check(game.elapsed > 12.3, "Automatic death respawn preserves running timer")
-	game.player.position = game.course.CHECKPOINTS[4]["position"]
+	game.player.position = game.course.CHECKPOINTS[penultimate]["position"]
 	game.player.grounded = true
 	game.update_checkpoints()
-	_check(game.checkpoint_index == 4, "Wall-slide pad checkpoint activates")
+	_check(game.checkpoint_index == penultimate, "Final pre-finish checkpoint activates")
 
 
 func _test_finish_and_restart() -> void:
+	var finish_index: int = game.course.CHECKPOINTS.size() - 1
 	game.elapsed = 65.2
-	game.player.position = game.course.CHECKPOINTS[5]["position"]
+	game.player.position = game.course.CHECKPOINTS[finish_index]["position"]
 	game.player.grounded = true
 	game.update_checkpoints()
-	_check(game.finished and game.checkpoint_index == 5, "Grounded finish activation completes run")
+	_check(game.finished and game.checkpoint_index == finish_index, "Grounded finish activation completes run")
 	_check(game.hud.message_kind == "finish" and game.hud.message_heading.text.contains("1:05.2"), "Completion card shows frozen finish time")
 	game.hud.dismiss_intro()
 	_check(game.hud.message_panel.visible, "Mouse capture intro dismissal preserves completion card")
@@ -180,7 +237,7 @@ func _test_finish_and_restart() -> void:
 	_check(game.player.position.x > before.x, "Player movement remains enabled after finish")
 	_key(KEY_ENTER)
 	_check(game.checkpoint_index == 0 and not game.started and not game.finished and is_zero_approx(game.elapsed), "Enter restarts checkpoint and timer after finish")
-	_check(game.player.position.is_equal_approx(Vector3(0, 0, 4)) and not game.hud.message_panel.visible, "Restart returns to start and hides completion message")
+	_check(game.player.position.is_equal_approx(game.course.CHECKPOINTS[0]["position"]) and not game.hud.message_panel.visible, "Restart returns to start and hides completion message")
 
 
 func _test_camera() -> void:
@@ -210,14 +267,14 @@ func _test_camera() -> void:
 	camera.boxes = empty_boxes
 	camera.tick(0.1, game.player)
 	_check(camera.distance > 1.7 and camera.distance < 5.2, "Camera returns outward smoothly after obstruction")
-	game.player.velocity = Vector3(20, 0, 0)
+	game.player.velocity = Vector3(12, 0, 0)
 	for i in 120:
 		camera.tick(0.01, game.player)
 	_check(camera.fov > 77.9 and camera.fov <= 78.0, "High speed widens camera FOV to maximum")
 	game.player.landed.emit(30.0)
-	_check(is_equal_approx(camera.dip, 0.45), "Landing signal produces capped camera dip")
+	_check(is_equal_approx(camera.dip, 0.2), "Landing signal produces calmer capped camera dip")
 	camera.tick(0.1, game.player)
-	_check(camera.dip > 0 and camera.dip < 0.45, "Landing camera dip settles smoothly")
+	_check(camera.dip > 0 and camera.dip < 0.2, "Landing camera dip settles smoothly")
 	_check(is_equal_approx(camera.ray_box(Vector3.ZERO, Vector3.BACK, AABB(Vector3(-1, -1, 2), Vector3(2, 2, 1))), 2.0), "Ray-box hit distance correct")
 	_check(camera.ray_box(Vector3(5, 0, 0), Vector3.BACK, AABB(Vector3(-1, -1, 2), Vector3(2, 2, 1))) > 1000, "Parallel ray outside bounds does not obstruct camera")
 	camera.boxes = saved_boxes
@@ -240,7 +297,7 @@ func _test_dust() -> void:
 	game.dust.tick(0.6, game.player)
 	_check(_live_particles() == 0, "Expired dust is hidden and reusable")
 	game.player.grounded = true
-	game.player.velocity = Vector3(13, 0, 0)
+	game.player.velocity = Vector3(7.8, 0, 0)
 	game.dust.footstep_time = 0.0
 	game.dust.tick(0.01, game.player)
 	_check(_live_particles() == 1, "Ground sprint emits footstep dust")
@@ -248,10 +305,11 @@ func _test_dust() -> void:
 
 
 func _test_hud() -> void:
-	game.hud.update_stats("Shaft top", 72.3, 13.0)
-	_check(game.hud.checkpoint_label.text == "Shaft top" and game.hud.timer_label.text == "1:12.3" and game.hud.speed_label.text == "13.0", "HUD displays current checkpoint, time and speed")
+	var checkpoint_name: String = game.course.CHECKPOINTS[2]["name"]
+	game.hud.update_stats(checkpoint_name, 72.3, 7.8)
+	_check(game.hud.checkpoint_label.text == checkpoint_name and game.hud.timer_label.text == "1:12.3" and game.hud.speed_label.text == "7.8", "HUD displays current checkpoint, time and reduced speed")
 	game.hud.show_intro()
-	_check(game.hud.message_heading.text == "Click to play" and game.hud.message_detail.text == "Reach the gold platform", "Intro retains original game instructions")
+	_check(game.hud.message_heading.text == "Click to play" and game.hud.message_detail.text == "Follow the gold arrows to Sunset garden", "Intro explains how to follow the expanded garden route")
 	game.hud.dismiss_intro()
 	_check(not game.hud.message_panel.visible, "Intro dismissal hides prompt")
 	_check(_all_mouse_ignored(game.hud.root), "HUD descendants allow mouse input through")

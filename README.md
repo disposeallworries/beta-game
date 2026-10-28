@@ -1,57 +1,72 @@
-# Mint Blob Parkour · Godot 4.5.1
+# Mint Blob Parkour · Mintwind Gardens
 
-A native, offline Godot conversion of the supplied **Mint Blob Parkour.html** game. The original embedded GLB character and its four animations are included. No Three.js, browser wrapper, plug-ins, package installation, or network access is needed to play.
+A native, offline **Godot 4.5.1** parkour game built from the uploaded HTML game and its original animated blob character. No browser wrapper, plug-ins, packages, or network connection is needed to play.
+
+![Mintwind Gardens](docs/start.png)
 
 ## Run
 
-1. Install **Godot 4.5.1 Standard** (GDScript version; .NET is unnecessary).
-2. Extract the complete project folder. In Godot, choose **Import** and select `project.godot`.
-3. Let Godot import the model, then press **F5**. Click in the game to capture the mouse.
+1. Install **Godot 4.5.1 Standard** (GDScript; .NET is unnecessary).
+2. Extract the project, then import its `project.godot` in Godot.
+3. Let the character model import and press **F5**. Click in the game to capture the mouse; **Esc** releases it.
 
-The project uses the Compatibility renderer, runs physics at 120 Hz, and starts at a resizable 1280 × 720. The main scene is `scenes/main.tscn`. When opening in 4.5.1, allow that version to generate its own `.godot` cache; caches from newer Godot versions are not included.
+The project uses the Compatibility renderer, a resizable 1280 × 720 window, and 120 Hz physics. Its main scene is `scenes/main.tscn`. Let 4.5.1 generate its own `.godot` cache rather than reusing a newer editor's cache.
+
+## Calmer movement and grounded climbing
+
+Horizontal movement is **60% of the previous version**: walking is 3.12 m/s and sprinting builds from 5.7 to 7.8 m/s. Acceleration, air steering, wall pushes, wall-jump speed limits, vault boosts, camera feedback, and sprint dust are tuned consistently. Jump height remains available for the redesigned obstacles.
+
+Ledge catches preserve the position you actually reach. Both hands grip the real platform lip, the feet brace against its wall, and the body pulls up before crossing onto the platform. The animation's extra jump displacement has been removed, so it no longer adds a second jump above the physical character.
+
+Hold W through a grab, or follow up with W, ↑ or Space within 0.22 seconds, for a supported 0.48-second pull-over. It preserves approach momentum and adds a modest 0.9 m/s, capped at 8.7 m/s. When half the body is already above a lip, a 0.32-second step-over helps complete the jump. Waiting at a ledge retains the normal 0.95-second climb. All climbs check headroom and standing clearance; there is no upward launch on exit.
+
+## A larger garden course
+
+**45 route platforms, 47 collision pieces, eight checkpoints, and roughly 250 meters of winding route.** The gaps fit the lower movement speed. Follow the gold arrows through:
+
+1. Arrival courtyard
+2. Mint garden
+3. Terrace ruins
+4. Wall-jump courtyard
+5. Sky gate
+6. Cloud orchard
+7. Wind bridge
+8. Sunset garden and the finish flag
+
+Trees, planted courtyards, stone arches, lanterns, hanging roots, distant floating islands, clouds and a soft sky give each part of the route a place in the garden. Checkpoint names and numbered stones help you keep track of progress.
+
+![Course overview](docs/overview.png)
+
+The overview uses a distant camera with fog disabled for visibility; gameplay keeps its normal distance fog.
 
 ## Controls
 
 | Key | Action |
 | --- | --- |
 | W / A / S / D | Move relative to the camera |
-| Shift | Sprint; sustained grounded running builds speed from 9.5 to 13 m/s |
-| Space | Jump, jump away from a wall, or climb a grabbed ledge |
+| Shift | Sprint |
+| Space | Jump, wall jump, or climb a grabbed ledge |
 | Release Space early | Shorten a normal jump |
-| W / ↑ / Space immediately after a grab | Quick vault with a speed boost; holding W through the grab also works |
+| W / ↑ / Space just after grabbing | Quick pull-over; holding W through the grab also works |
 | S / Ctrl | Let go of a wall or ledge |
-| Mouse | Orbit the camera after clicking the game |
-| Esc | Release the mouse; click to recapture |
-| R | Respawn at the current checkpoint, keeping the timer |
-| Enter | Start a new run after completing the course |
+| Mouse after clicking | Orbit the camera |
+| Esc | Release the mouse |
+| R | Return to the current checkpoint, keeping elapsed time |
+| Enter after finishing | Start a new run |
 
-The timer begins with WASD or Space. Reach the gold platform to finish. Holding Shift and jumping near platform edges helps clear the wider gaps. Jump toward a wall, then press Space again to push away; alternate walls in the shaft to gain height. Ledges grab automatically when your hands reach their tops. Keep W held through a grab, or follow up with W, ↑ or Space within 0.22 seconds, to vault in 0.24 seconds instead of doing the regular 0.95-second pull-up. The vault keeps your approach speed and adds 1.5 m/s, capped at 14.5 m/s (minimum exit speed 5.2 m/s). If half your body is already above the lip, a 0.18-second step-over helps you clear it automatically, even while rising. Both paths require clear headroom and standing space; S/Ctrl still lets you drop. Waiting at a ledge retains the normal pull-up. Keep Space held for full jump height.
+The timer starts with WASD or Space. Alternate walls and press Space again at each contact to climb the shaft. Reach the gold finish platform to complete the course. Progress is not saved between runs.
 
-## Movement and features
+## Edit and export
 
-- All 19 solid course pieces, their original dimensions and colors, six checkpoints, checkpoint disks, and finish flag.
-- Camera-relative acceleration, sprint buildup, air momentum, buffered jumps, coyote time, variable jump height, and terminal fall speed.
-- Wall sliding, momentum-sensitive wall jumps, same-wall reattachment lockout, dropping and away-input release.
-- Ledge grabbing, hanging, headroom checks, quick follow-through vaults with momentum boosts, halfway-above assistance, regular automatic/manual climbing, and drop cooldown.
-- Original idle/walk/run/jump clips, speed blending, hand/foot contact poses for walls and ledges, and wall-jump/drop pose overlays.
-- Jump, landing, wall-contact and sprint dust; soft shadows, distance fog, camera landing dip, automatic following, obstacle avoidance and speed-dependent FOV.
-- Checkpoint, time and speed display; control guide; start and completion prompts; death respawn; full restart.
+- `scripts/player.gd`: movement constants, axis-separated collision, jumps and ledge mechanics.
+- `scripts/blob_visual.gd`: original GLB clip blending, planted-hand contact and foot poses.
+- `scripts/course.gd`: platform coordinates, checkpoints, route metadata and procedural garden scenery.
+- `scripts/game.gd`: input, timer, checkpoint progression and restart.
+- `scripts/follow_camera.gd`, `dust.gd`, `game_hud.gd`: camera, effects and native UI.
+- `assets/mint_blob.glb`: the original character extracted from the uploaded HTML.
 
-Respawning also clears stale movement timers and buffered input, preventing a prior jump or wall state from leaking into the new spawn. Lighting is tuned for Godot's color pipeline so the source's pastel palette remains visible.
-
-## Project layout
-
-- `scripts/game.gd`: input, run timer, checkpoints, respawn and completion.
-- `scripts/player.gd`: the source game's axis-separated AABB controller, ported at its original fixed timestep to preserve jump distances and wall/ledge tuning.
-- `scripts/course.gd`: course construction, matching Godot collision shapes, lighting and fog.
-- `scripts/blob_visual.gd`: blending of the original imported clips and procedural contact poses.
-- `scripts/follow_camera.gd`, `dust.gd`, `game_hud.gd`: camera, particle pool and native UI.
-- `assets/mint_blob.glb`: character extracted directly from the uploaded HTML.
-
-The course is generated at startup from its original coordinates; edit `course.gd` to change platforms. Input actions are registered by `game.gd` without an external setup step. No progress is saved between runs, matching the original game.
+The map is generated when the scene starts; edit `course.gd` to change it. To export an executable, install the matching **4.5.1 export templates** and use **Project → Export** for your platform.
 
 ## Validation
 
-Tested using **Godot 4.5.1.stable.official.f62fdbde1**: 224 automated assertions passed, including quick vaults, halfway assistance, and a full controls-only course traversal. See `TESTING.md` for checks and reproducible commands.
-
-To distribute a standalone game, install the matching **4.5.1 export templates**, then use Godot's **Project → Export** for your target platform. The included files are the editable project, not an operating-system-specific executable.
+Tested on **Godot 4.5.1.stable.official.f62fdbde1**. All **534 checks pass**, including a controls-only run through the entire expanded course, every checkpoint, actual hand-tip contact, and the revised movement and vault mechanics. See `TESTING.md` for commands and coverage.

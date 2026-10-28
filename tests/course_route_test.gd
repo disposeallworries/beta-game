@@ -1,7 +1,7 @@
 extends SceneTree
-## Replays a successful, controls-only run through the full original course.
+## Replays a successful, controls-only run through the complete sky-garden course.
 ## The fixture was found with controller rollouts, then replayed without teleporting
-## or setting movement/state. All six checkpoints must be reached on the ground.
+## or setting movement/state. Every checkpoint must be reached on the ground.
 const Player = preload("res://scripts/player.gd")
 const Course = preload("res://scripts/course.gd")
 const DT := 1.0 / 120.0
@@ -61,7 +61,7 @@ func run() -> void:
 						quick_vaults += 1
 				if before == "climb" and player.state == "move" and was_quick:
 					var exit_speed: float = Vector2(player.velocity.x, player.velocity.z).length()
-					check(exit_speed >= 5.2 - 0.001 and exit_speed <= Player.VAULT_MAX_SPEED + 0.001, "vault exits preserve bounded forward momentum")
+					check(exit_speed >= Player.WALK_SPEED - 0.001 and exit_speed <= Player.VAULT_MAX_SPEED + 0.001, "vault exits preserve bounded forward momentum")
 					momentum_exits += 1
 			if player.position.y < -14:
 				check(false, "recorded route must not fall off the course")
@@ -81,18 +81,21 @@ func run() -> void:
 				if absf(player.position.y - box.end.y) < .001 and player.position.x > box.position.x - .35 and player.position.x < box.end.x + .35 and player.position.z > box.position.z - .35 and player.position.z < box.end.z + .35:
 					if i not in stood_on:
 						stood_on.append(i)
-	check(reached == [0, 1, 2, 3, 4, 5], "all six checkpoints reached in course order while grounded")
-	for index in [0, 1, 2, 3, 4, 5, 6, 7, 9, 10, 12, 13, 14, 15, 16, 17, 18]:
+	var expected: Array[int] = []
+	for index in course.CHECKPOINTS.size():
+		expected.append(index)
+	check(reached == expected, "all sky-garden checkpoints reached in course order while grounded")
+	for index in course.ROUTE_TARGETS:
 		check(index in stood_on, "stand on course platform %d" % index)
 	check(int(transitions.get("move->wall", 0)) >= 2, "contact both walls in shaft")
 	check(int(transitions.get("wall->move", 0)) >= 2, "jump away from shaft walls")
-	check(int(transitions.get("move->hang", 0)) >= 1, "grab a taller ledge before quick vaulting")
-	check(int(transitions.get("hang->climb", 0)) + int(transitions.get("move->climb", 0)) >= 3, "vault both ledges and shaft top")
+	check(int(transitions.get("move->hang", 0)) >= 1, "grab a tall ledge before quick vaulting")
+	check(int(transitions.get("hang->climb", 0)) + int(transitions.get("move->climb", 0)) >= 3, "vault garden ledges and shaft top")
 	check(quick_vaults >= 1, "activate quick vaults while traversing the course")
 	check(assisted_vaults >= 1, "activate halfway-height auto-assist while traversing the course")
 	check(momentum_exits >= 3, "complete quick and assisted vaults with momentum")
-	check(player.grounded and absf(player.position.y - 12.6) < .001, "finish grounded on gold platform")
-	var finish: Vector3 = course.CHECKPOINTS[5]["position"]
+	var finish: Vector3 = course.CHECKPOINTS[-1]["position"]
+	check(player.grounded and absf(player.position.y - finish.y) < .001, "finish grounded on gold platform")
 	check(Vector2(player.position.x - finish.x, player.position.z - finish.z).length() < 2.2, "reach finish flag trigger")
 	print("Full course: %d assertions, %d failures; %d controls-only ticks; checkpoints %s; %d quick / %d assisted vaults" % [assertions, failures, ticks, str(reached), quick_vaults, assisted_vaults])
 	course.free()

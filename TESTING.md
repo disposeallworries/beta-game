@@ -1,26 +1,27 @@
 # Validation
 
-Use the **Godot 4.5.1** executable. Replace `godot` below with its path if necessary. Run from the project root.
+Use **Godot 4.5.1**. Replace `godot` with its executable path when necessary. Run from the project root:
 
 ```sh
 godot --headless --editor --path . --import
 godot --headless --path . --script tests/controller_test.gd
 godot --headless --path . --script tests/vault_test.gd
+godot --headless --path . --script tests/contact_animation_test.gd
 godot --headless --path . --script tests/game_test.gd
 godot --headless --path . --script tests/course_route_test.gd
 godot --headless --path . --quit-after 240
 ```
 
-- `controller_test.gd`: 69 checks for walking/sprinting, diagonal and camera-relative input, air momentum, short/full jumps, jump buffer, coyote time, collision, wall slide/jump/drop/release, ledge hang/climb/drop/clearance/cooldown, events and respawn resets.
-- `vault_test.gd`: 49 checks for the quick follow-up window, held-forward flow, fast and regular climb durations, pre-collision momentum carry, bounded boost, halfway assistance (including rising jumps), no downward snapping, drop priority, cooldowns, destination/headroom/path clearance, an obstruction appearing mid-vault, and reset behavior.
-- `game_test.gd`: 75 checks for original course geometry and checkpoints, imported model and all four animation clips, animation blending, controls, timer, checkpoint progression, death/normal respawn, completion/restart, HUD, camera collision/FOV/landing dip and dust lifecycle. It also exercises the real character animation during a quick vault and boosted exit.
+| Suite | Checks | Coverage |
+| --- | ---: | --- |
+| `controller_test.gd` | 76 | Reduced walk/sprint/acceleration, diagonal and camera-relative movement, momentum, full/short jumps, coyote time, input buffer, collisions, wall actions, no-teleport ledge catches, climb and respawn. |
+| `vault_test.gd` | 56 | Quick window, 0.48/0.32-second durations, pre-impact momentum, scaled boost/caps, halfway assistance, no height snap or upward exit, clearance, blocked path, drop priority and reset. |
+| `contact_animation_test.gd` | 186 | Actual world-space hand tips stay on the lip in four directions over reachable catch heights/gaps; neutral root during contact; no double jump displacement; hand release, limb lengths, foot bracing and slower animation cadence. |
+| `game_test.gd` | 157 | Expanded course size/route/native shapes, every checkpoint's standing clearance and stability under actual physics, imported clips, input/timer, camera, particles, HUD, finish/restart and animated vault integration. |
+| `course_route_test.gd` | 59 | Full controls-only traversal of all 45 route platforms and eight checkpoints, shaft wall jumps, one supported quick vault, two halfway assists, bounded exit momentum and finish. |
 
-- `course_route_test.gd`: 31 assertions replaying a deterministic, controls-only run from Start to Finish. Its 2,602 fixed ticks visit all six checkpoints in order, land on all 17 route platforms, jump between shaft walls, and clear three ledges: one quick follow-through vault and two halfway-height assists. All three exits carry forward momentum. After the initial spawn it never teleports the player or assigns movement state/velocity. The recorded input is in `tests/route.json`.
+**534 checks passed with zero failures** on `4.5.1.stable.official.f62fdbde1`. The full course replay uses 13,475 fixed ticks (about 112 seconds of gameplay); it does not teleport the player or assign its movement state or velocity after the initial spawn. Its recorded inputs are in `tests/route.json`.
 
-All **224 assertions passed** on the exact 4.5.1 release. These tests run the actual game scripts. Fixture tests and checkpoint state-transition tests are distinguished from complete course traversal.
+The game and hanging/pull-up poses were also rendered using Godot's Compatibility/OpenGL renderer. Screenshots in `docs/` include the starting courtyard, sky-gate route, map overview and a close-up contact fixture. The overview disables fog for a clear distant view; gameplay uses normal fog.
 
-The main scene was also rendered with the Compatibility/OpenGL renderer on Godot 4.5.1 and visually inspected for model appearance, platform colors, shadows and UI layout. Desktop screenshots are in `docs/`.
-
-The default `godot` command on the build machine was a newer version; all final import, gameplay and integration checks used the explicit 4.5.1 binary. If a newer editor has already generated an import cache, close it and remove only the generated `.godot/` folder before reimporting with 4.5.1.
-
-On a CI system that disallows writes to its standard user directories, set `XDG_DATA_HOME`, `XDG_CONFIG_HOME`, and `XDG_CACHE_HOME` to writable locations before invoking Godot. This is not needed on a normal desktop.
+The editable ZIP excludes generated `.godot` caches. If a newer editor already imported the project, close it and regenerate that cache using 4.5.1. CI machines with read-only user directories can set `XDG_DATA_HOME`, `XDG_CONFIG_HOME` and `XDG_CACHE_HOME` to writable locations before running the commands.

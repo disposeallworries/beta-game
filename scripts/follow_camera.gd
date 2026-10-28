@@ -17,7 +17,7 @@ func orbit(relative: Vector2) -> void:
 func tick(dt: float, player: ParkourPlayer) -> void:
 	idle += dt
 	var speed: float = Vector2(player.velocity.x, player.velocity.z).length()
-	if idle > 1.0 and player.state == "move" and speed > 3.0:
+	if idle > 1.0 and player.state == "move" and speed > 3.0 * ParkourPlayer.MOVEMENT_SCALE:
 		var facing: float = (-player.velocity.x * sin(yaw) - player.velocity.z * cos(yaw)) / speed
 		if facing > 0.3:
 			yaw = lerp_angle(yaw, atan2(-player.velocity.x, -player.velocity.z), 1.0 - exp(-1.2 * dt * facing))
@@ -33,7 +33,7 @@ func tick(dt: float, player: ParkourPlayer) -> void:
 	distance = desired_distance if desired_distance < distance else lerpf(distance, desired_distance, 1.0 - exp(-4.0 * dt))
 	position = target + orbit_direction * distance
 	look_at(target + Vector3.UP * 0.1, Vector3.UP)
-	fov = lerpf(fov, 60.0 + clampf((speed - 6.0) * 1.4, 0.0, 18.0), 1.0 - exp(-5.0 * dt))
+	fov = lerpf(fov, 60.0 + clampf((speed / ParkourPlayer.MOVEMENT_SCALE - 6.0) * 1.4, 0.0, 18.0), 1.0 - exp(-5.0 * dt))
 
 static func ray_box(origin: Vector3, direction: Vector3, bounds: AABB) -> float:
 	var low: float = 0.0

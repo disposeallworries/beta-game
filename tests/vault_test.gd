@@ -51,12 +51,21 @@ func _finish(p: ParkourPlayer) -> Dictionary:
 	var ticks: int = 0
 	var clear: bool = true
 	var minimum_height: float = p.position.y
+	var maximum_height: float = p.position.y
+	var maximum_up_step: float = 0.0
+	var rises_before_crossing: bool = true
+	var start: Vector3 = p.position
 	while p.state == "climb" and ticks < 150:
+		var previous_y: float = p.position.y
 		p.simulate(DT, {})
 		clear = clear and not p.blocked(p.position + Vector3.UP * 0.0001)
 		minimum_height = minf(minimum_height, p.position.y)
+		maximum_height = maxf(maximum_height, p.position.y)
+		maximum_up_step = maxf(maximum_up_step, p.position.y - previous_y)
+		if Vector2(p.position.x - start.x, p.position.z - start.z).length() > 0.002:
+			rises_before_crossing = rises_before_crossing and p.position.y >= p.climb_end.y - 0.001
 		ticks += 1
-	return {"ticks": ticks, "clear": clear, "minimum_height": minimum_height}
+	return {"ticks": ticks, "clear": clear, "minimum_height": minimum_height, "maximum_height": maximum_height, "maximum_up_step": maximum_up_step, "rises_before_crossing": rises_before_crossing}
 
 func _test_quick_followups() -> void:
 	var p := _hang()
@@ -65,12 +74,16 @@ func _test_quick_followups() -> void:
 	_check(p.state == "hang", "No follow-up input preserves the hang")
 	p.simulate(DT, {"forward": true})
 	_check(p.state == "climb" and p.quick_vault, "Quick forward follow-up starts the fast vault")
-	_near(p.climb_duration, 0.24, "Quick follow-up uses 0.24-second animation")
+	_near(p.climb_duration, 0.48, "Quick follow-up uses a controlled 0.48-second pull-over")
 	var result := _finish(p)
-	_check(result["ticks"] <= 30 and p.state == "move" and p.grounded, "Fast vault completes promptly on top")
+	_check(result["ticks"] >= 57 and result["ticks"] <= 59 and p.state == "move" and p.grounded, "Fast vault completes promptly on top")
 	_check(result["clear"], "Fast vault never intersects the ledge while rising and crossing")
+	_check(result["maximum_up_step"] < 0.05, "Fast vault lifts gradually instead of snapping upward like a launch")
+	_check(result["rises_before_crossing"], "Fast vault fully clears the lip before moving onto the platform")
+	_near(result["maximum_height"], 3.0, "Fast vault never rises above its standing destination")
 	_near(p.position.y, 3.0, "Fast vault finishes at the top height")
-	_check(p.velocity.z < -5.0, "Fast vault exits forward instead of stopping")
+	_near(-p.velocity.z, 3.12, "Low-speed fast vault exits forward at the scaled walk speed")
+	_near(p.velocity.y, 0.0, "Fast vault exits grounded without upward launch velocity")
 	_check(not p.quick_vault and is_zero_approx(p.ledge_entry_speed), "Completed vault clears its stored entry momentum and active flag")
 	p.free()
 	p = _hang()
@@ -111,27 +124,27 @@ func _test_window_and_slow_fallback() -> void:
 
 func _test_momentum() -> void:
 	var p := _player(Vector3(0, 1.9, -0.64))
-	p.velocity.z = -10.0
+	p.velocity.z = -6.0
 	p.simulate(DT, {"forward": true})
 	_check(p.state == "hang" and not p.hit.is_empty(), "Momentum fixture actually collides with the ledge before grabbing")
-	_near(p.ledge_entry_speed, 10.0, "Vault entry speed survives a collision that zeroes forward velocity")
+	_near(p.ledge_entry_speed, 6.0, "Vault entry speed survives a collision that zeroes forward velocity")
 	p.free()
-	p = _hang(10.0)
-	_near(p.ledge_entry_speed, 10.0, "Grab records incoming speed before collision or hanging clears it")
+	p = _hang(6.0)
+	_near(p.ledge_entry_speed, 6.0, "Grab records incoming speed before collision or hanging clears it")
 	p.simulate(DT, {"forward": true})
 	_finish(p)
-	_near(p.velocity.length(), 11.5, "Fast vault carries 10 m/s approach plus 1.5 m/s boost")
+	_near(p.velocity.length(), 6.9, "Fast vault carries 6 m/s approach plus 0.9 m/s boost")
 	_check(p.velocity.z < 0 and is_zero_approx(p.velocity.y), "Boost points across the lip without an extra upward jump")
 	p.free()
-	p = _hang(13.0)
+	p = _hang(7.8)
 	p.simulate(DT, {"forward": true})
 	_finish(p)
-	_near(p.velocity.length(), 14.5, "Full-sprint vault gets a bounded speed boost")
+	_near(p.velocity.length(), 8.7, "Full-sprint vault gets a bounded speed boost")
 	p.free()
 	p = _hang(30.0)
 	p.simulate(DT, {"forward": true})
 	_finish(p)
-	_check(p.velocity.length() <= 14.501, "Extreme approach speed cannot create an unbounded vault boost")
+	_check(p.velocity.length() <= 8.701, "Extreme approach speed cannot create an unbounded vault boost")
 	p.free()
 	p = _hang()
 	p.sprint_time = 2.5
@@ -144,13 +157,16 @@ func _test_halfway_assist() -> void:
 	var p := _player(Vector3(0, 2.5, -0.5))
 	var start_y: float = p.position.y
 	p.simulate(DT, {"forward": true})
-	_check(p.state == "climb" and p.quick_vault, "Body already halfway above a lip clears automatically")
-	_near(p.climb_duration, 0.18, "Halfway assistance uses the shorter 0.18-second vault")
+	_check(p.state == "climb" and p.quick_vault and p.assisted_vault, "Body already halfway above a lip clears automatically with assist metadata")
+	_near(p.climb_duration, 0.32, "Halfway assistance uses a controlled 0.32-second pull-over")
 	_check(p.position.y >= start_y - 0.003, "Halfway assistance does not snap the player down to hanging height")
 	var result := _finish(p)
 	_check(result["minimum_height"] >= start_y - 0.003 and result["clear"], "Assisted path rises cleanly without sinking into the lip")
-	_check(result["ticks"] <= 23 and p.grounded, "Halfway assist lands on top promptly")
-	_check(p.velocity.z < -5.0, "Halfway assistance also carries the player forward with speed")
+	_check(result["maximum_up_step"] < 0.04 and result["rises_before_crossing"], "Assisted climb lifts gradually and clears the lip before crossing")
+	_near(result["maximum_height"], 3.0, "Assisted climb has no floating arc above the platform")
+	_check(result["ticks"] >= 38 and result["ticks"] <= 40 and p.grounded, "Halfway assist lands on top promptly")
+	_near(-p.velocity.z, 3.12, "Low-speed halfway assistance exits forward at the scaled walk speed")
+	_near(p.velocity.y, 0.0, "Assisted climb ends standing without upward launch velocity")
 	p.free()
 	p = _player(Vector3(0, 2.5, -0.5))
 	p.velocity = Vector3(0, 7, -8)
@@ -207,7 +223,7 @@ func _test_safety() -> void:
 	p.simulate(DT, {"forward": true})
 	_check(p.state == "hang", "Vault checks the whole rise path instead of only its endpoint")
 	p.free()
-	p = _hang(10.0)
+	p = _hang(6.0)
 	p.simulate(DT, {"forward": true})
 	# A newly inserted blocker must not be tunneled through mid-vault.
 	p.boxes.append(landing_ceiling)
@@ -219,14 +235,14 @@ func _test_safety() -> void:
 	p.free()
 
 func _test_resets() -> void:
-	var p := _hang(10.0)
+	var p := _hang(6.0)
 	p.simulate(DT, {"drop": true})
 	_check(p.state == "move" and not p.quick_vault and is_zero_approx(p.ledge_entry_speed), "Dropping clears stored vault momentum")
 	p.free()
-	p = _hang(10.0)
+	p = _hang(6.0)
 	p.simulate(DT, {"forward": true})
 	p.respawn(Vector3(2, 7, 1))
-	_check(p.state == "move" and not p.quick_vault and is_zero_approx(p.ledge_entry_speed), "Respawn clears an active fast vault and its saved entry speed")
+	_check(p.state == "move" and not p.quick_vault and not p.assisted_vault and is_zero_approx(p.ledge_entry_speed), "Respawn clears active vault flags and saved entry speed")
 	_near(p.climb_duration, 0.95, "Respawn restores regular climb timing")
 	_check(p.velocity == Vector3.ZERO and p.position == Vector3(2, 7, 1), "Respawn cannot carry a pending vault boost into the checkpoint")
 	p.free()
