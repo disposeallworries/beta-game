@@ -3,7 +3,7 @@ config_version=5
 
 [application]
 config/name="Mint Blob Parkour"
-config/version="1.2.0"
+config/version="1.2.1"
 run/main_scene="res://scenes/main.tscn"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://assets/icon.svg"
@@ -23,4 +23,4 @@ renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
 textures/default_filters/use_nearest_mipmap_filter=false
 anti_aliasing/quality/msaa_3d=2
-environment/defaults/default_clear_color=Color(0.65098, 0.76078, 0.81176, 1)
+environment/defaults/default_clear_color=Color(0.10, 0.16, 0.23, 1)

@@ -12,6 +12,14 @@ A native, offline **Godot 4.5.1** parkour game built from the uploaded HTML game
 
 The project uses the Compatibility renderer, a resizable 1280 × 720 window, and 120 Hz physics. Its main scene is `scenes/main.tscn`. Let 4.5.1 generate its own `.godot` cache rather than reusing a newer editor's cache.
 
+## Cinematic garden lighting
+
+The garden uses a muted dusk sky, warm low-angle sunlight, cool shadow fill, restrained highlights, distance fog, and warm lanterns. Dark HUD panels keep the view comfortable. Route arrows and platform edges remain readable against the cooler background.
+
+## Roguelite direction
+
+A proposed parkour-first expedition mode is described in [Roguelite ideas](docs/ROGUELITE_IDEAS.md): three hearts, relic choices, risky seed detours and cosmetic unlocks. Those systems are **design ideas**, not implemented gameplay in this version.
+
 ## Calmer movement and grounded climbing
 
 Horizontal movement is **60% of the previous version**: walking is 3.12 m/s and sprinting builds from 5.7 to 7.8 m/s. Acceleration, air steering, wall pushes, wall-jump speed limits, vault boosts, camera feedback, and sprint dust are tuned consistently. Jump height remains available for the redesigned obstacles.

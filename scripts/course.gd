@@ -87,9 +87,12 @@ func box(low: Vector3, high: Vector3, color: Color) -> void:
 	shape.shape = cube_shape
 	body.add_child(shape)
 	var mesh := BoxMesh.new()
-	mesh.size = bounds.size
+	# The inset cap owns the top face. Lower the base mesh so its coplanar
+	# top cannot flicker through the cap under the low cinematic sunlight.
+	mesh.size = Vector3(bounds.size.x, bounds.size.y - .07, bounds.size.z)
 	var visual := MeshInstance3D.new()
 	visual.mesh = mesh
+	visual.position.y = -.035
 	visual.material_override = material(color.darkened(0.12))
 	body.add_child(visual)
 	# A flush inset cap and shallow lower plinth give the islands a crafted rim.
@@ -102,6 +105,7 @@ func material(color: Color) -> StandardMaterial3D:
 		var mat := StandardMaterial3D.new()
 		mat.albedo_color = color
 		mat.roughness = .9
+		mat.metallic_specular = .2
 		materials[color] = mat
 	return materials[color]
 
@@ -268,7 +272,22 @@ func _label(at: Vector3, text: String, font_size: int, color: Color) -> void:
 func _lantern(at: Vector3) -> void:
 	_mesh_box(scenery, at + Vector3.UP * .1, Vector3(.55, .2, .55), INK)
 	_mesh_box(scenery, at + Vector3.UP * .65, Vector3(.13, 1.0, .13), INK)
-	_mesh_box(scenery, at + Vector3.UP * 1.25, Vector3(.42, .45, .42), GOLD.lightened(.2))
+	var glass := _mesh_box(scenery, at + Vector3.UP * 1.25, Vector3(.42, .45, .42), GOLD)
+	var glow := StandardMaterial3D.new()
+	glow.albedo_color = Color("f5be73")
+	glow.emission_enabled = true
+	glow.emission = Color("ffc47d")
+	glow.emission_energy_multiplier = .6
+	glass.material_override = glow
+	var lamp := OmniLight3D.new()
+	lamp.name = "LanternLight"
+	lamp.position = at + Vector3.UP * 1.2
+	lamp.light_color = Color("ffc47d")
+	lamp.light_energy = .45
+	lamp.omni_range = 3.4
+	lamp.omni_attenuation = 1.8
+	lamp.shadow_enabled = false
+	scenery.add_child(lamp)
 	_mesh_box(scenery, at + Vector3.UP * 1.53, Vector3(.6, .12, .6), INK)
 
 func _distant_island(at: Vector3, radius: float) -> void:
@@ -329,31 +348,33 @@ func _environment() -> void:
 	var env := Environment.new()
 	var sky := Sky.new()
 	var gradient := ProceduralSkyMaterial.new()
-	gradient.sky_top_color = Color("a5c8d2")
-	gradient.sky_horizon_color = Color("e9eee0")
-	gradient.ground_bottom_color = Color("9cb9ba")
-	gradient.ground_horizon_color = Color("e9eee0")
+	gradient.sky_top_color = Color("122036")
+	gradient.sky_horizon_color = Color("775e5a")
+	gradient.ground_bottom_color = Color("0e1b2b")
+	gradient.ground_horizon_color = Color("435361")
 	gradient.sky_curve = .2
 	gradient.ground_curve = .4
 	sky.sky_material = gradient
 	env.sky = sky
 	env.background_mode = Environment.BG_SKY
-	env.background_color = Color("dce9e2")
+	env.background_color = Color("263b50")
+	env.background_energy_multiplier = .65
 	env.ambient_light_source = Environment.AMBIENT_SOURCE_COLOR
-	env.ambient_light_color = Color("e3e9ed")
-	env.ambient_light_energy = .35
-	env.tonemap_mode = Environment.TONE_MAPPER_LINEAR
+	env.ambient_light_color = Color("8ba6c2")
+	env.ambient_light_energy = .28
+	env.tonemap_mode = Environment.TONE_MAPPER_ACES
+	env.tonemap_exposure = .9
 	env.fog_enabled = true
-	env.fog_light_color = Color("dce9e2")
+	env.fog_light_color = Color("435c70")
 	env.fog_mode = Environment.FOG_MODE_DEPTH
-	env.fog_depth_begin = 90
-	env.fog_depth_end = 240
+	env.fog_depth_begin = 60
+	env.fog_depth_end = 220
 	world.environment = env
 	add_child(world)
 	sun = DirectionalLight3D.new()
 	sun.name = "Sun"
-	sun.light_color = Color("fff1dc")
-	sun.light_energy = .75
+	sun.light_color = Color("ffcf9a")
+	sun.light_energy = .38
 	sun.shadow_enabled = true
 	sun.directional_shadow_max_distance = 120
 	sun.directional_shadow_mode = DirectionalLight3D.SHADOW_PARALLEL_4_SPLITS
@@ -361,5 +382,5 @@ func _environment() -> void:
 	follow_sun(Vector3.ZERO)
 
 func follow_sun(at: Vector3) -> void:
-	sun.position = at + Vector3(22, 38, 16)
+	sun.position = at + Vector3(28, 18, 18)
 	sun.look_at(at, Vector3.UP)

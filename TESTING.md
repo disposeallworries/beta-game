@@ -22,6 +22,8 @@ godot --headless --path . --quit-after 240
 
 **534 checks passed with zero failures** on `4.5.1.stable.official.f62fdbde1`. The full course replay uses 13,475 fixed ticks (about 112 seconds of gameplay); it does not teleport the player or assign its movement state or velocity after the initial spawn. Its recorded inputs are in `tests/route.json`.
 
+The cinematic-lighting update was additionally checked with the 157 integration checks, 59 full-course checks, and fresh gameplay/overview renders.
+
 The game and hanging/pull-up poses were also rendered using Godot's Compatibility/OpenGL renderer. Screenshots in `docs/` include the starting courtyard, sky-gate route, map overview and a close-up contact fixture. The overview disables fog for a clear distant view; gameplay uses normal fog.
 
 The editable ZIP excludes generated `.godot` caches. If a newer editor already imported the project, close it and regenerate that cache using 4.5.1. CI machines with read-only user directories can set `XDG_DATA_HOME`, `XDG_CONFIG_HOME` and `XDG_CACHE_HOME` to writable locations before running the commands.

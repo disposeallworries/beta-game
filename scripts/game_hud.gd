@@ -10,8 +10,8 @@ var message_heading: Label
 var message_detail: Label
 var message_kind: String = ""
 var root: Control
-var ink: Color = Color("22313a")
-var panel_color: Color = Color(1.0, 1.0, 1.0, 0.8)
+var ink: Color = Color("e4e9ec")
+var panel_color: Color = Color(0.035, 0.055, 0.080, 0.86)
 var bold_font: FontVariation
 
 
@@ -19,9 +19,6 @@ func setup() -> void:
 	if is_instance_valid(root):
 		return
 	layer = 10
-	if DisplayServer.is_dark_mode_supported() and DisplayServer.is_dark_mode():
-		ink = Color("e8f1f3")
-		panel_color = Color(0.078, 0.118, 0.141, 0.78)
 	bold_font = FontVariation.new()
 	bold_font.base_font = ThemeDB.fallback_font
 	bold_font.variation_embolden = 0.7
@@ -78,7 +75,7 @@ func setup() -> void:
 	]
 	for row: Array in controls:
 		var key_label: Label = _label(str(row[0]), 14, true)
-		key_label.add_theme_color_override("font_color", Color("e4604a"))
+		key_label.add_theme_color_override("font_color", Color("e2b879"))
 		grid.add_child(key_label)
 		grid.add_child(_label(str(row[1]), 14))
 
