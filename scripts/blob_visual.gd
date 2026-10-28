@@ -30,6 +30,16 @@ var _grip_anchors: Array[Vector3] = []
 var _grip_front := 0.0
 var _grip_top := 0.0
 var _root_return := 0.0
+var _weapon_level := 0
+var _sword: Node3D
+var _blade: MeshInstance3D
+var _blade_material: StandardMaterial3D
+var _core: MeshInstance3D
+var _core_material: StandardMaterial3D
+var _core_charge := 0.0
+var _attack_kind := ""
+var _attack_time := 0.0
+var _attack_duration := 0.0
 
 
 func setup(for_player: Node3D) -> void:
@@ -52,6 +62,7 @@ func setup(for_player: Node3D) -> void:
 		bones.append(bone)
 		_pose.append(Quaternion.IDENTITY)
 	_load_original_clips()
+	_build_combat_details()
 
 
 func tick(dt: float) -> void:
@@ -89,6 +100,9 @@ func tick(dt: float) -> void:
 		_times[i] = minf(_times[i] + dt * length / 0.8, length) if i == 3 else fmod(_times[i] + dt * cadence, length)
 	_apply_animation(weight_sum)
 	if contact:
+		_cancel_attack()
+		if _sword != null:
+			_sword.visible = false
 		_apply_contact_pose()
 		_root_return = 1.0
 		_previous_contact = player.state
@@ -113,6 +127,153 @@ func tick(dt: float) -> void:
 	if _pose_weight > 0.01:
 		for i in range(5):
 			bones[i].quaternion = bones[i].quaternion.slerp(_pose[i], _pose_weight)
+	_apply_combat_pose(dt)
+
+
+func set_weapon(level: int) -> void:
+	_weapon_level = clampi(level, 0, 2)
+	if _sword == null:
+		return
+	_sword.visible = _weapon_level > 0 and (player == null or player.state == "move")
+	var strong: bool = _weapon_level == 2
+	_blade_material.albedo_color = Color("b1f1f0") if strong else Color("dce8ed")
+	_blade_material.emission_enabled = strong
+	_blade_material.emission = Color("75dce0")
+	_blade_material.emission_energy_multiplier = 0.45 if strong else 0.0
+	_blade.scale.x = 1.2 if strong else 1.0
+	if _weapon_level == 0 and _attack_kind == "sword":
+		_cancel_attack()
+
+
+func play_attack(kind: String) -> bool:
+	if kind not in ["bolt", "sword"] or player == null or player.state != "move":
+		return false
+	if kind == "sword" and _weapon_level == 0:
+		return false
+	_attack_kind = kind
+	_attack_time = 0.0
+	_attack_duration = 0.42 if kind == "sword" else 0.34
+	return true
+
+
+func set_core_charge(ratio: float) -> void:
+	_core_charge = clampf(ratio, 0.0, 1.0)
+	if _core_material == null:
+		return
+	# State changes brighten the core gently; there is no flicker or time pulse.
+	_core_material.albedo_color = Color("226b78").lerp(Color("86f0ed"), _core_charge)
+	_core_material.emission_energy_multiplier = lerpf(0.08, 0.55, _core_charge)
+	_core.scale = Vector3.ONE * lerpf(0.92, 1.0, _core_charge)
+
+
+func _build_combat_details() -> void:
+	_sword = Node3D.new()
+	_sword.name = "SwordGrip"
+	_sword.position = HAND_TIP
+	bones[2].add_child(_sword)
+	var grip_material := _combat_material(Color("344451"), 0.25)
+	var guard_material := _combat_material(Color("c9a65a"), 0.55)
+	_blade_material = _combat_material(Color("dce8ed"), 0.65)
+	_combat_box(_sword, Vector3(0.062, 0.14, 0.055), Vector3(0, 0.015, 0), grip_material)
+	_combat_box(_sword, Vector3(0.24, 0.04, 0.07), Vector3(0, -0.065, 0), guard_material)
+	_blade = _combat_box(_sword, Vector3(0.075, 0.59, 0.035), Vector3(0, -0.38, 0), _blade_material)
+	# A small tapered point completes a total 0.83 m weapon, pommel to tip.
+	var point := MeshInstance3D.new()
+	var point_mesh := CylinderMesh.new()
+	point_mesh.top_radius = 0.0
+	point_mesh.bottom_radius = 0.039
+	point_mesh.height = 0.09
+	point_mesh.radial_segments = 4
+	point.mesh = point_mesh
+	point.material_override = _blade_material
+	point.position = Vector3(0, -0.72, 0)
+	point.rotation.z = PI
+	_sword.add_child(point)
+	_core = MeshInstance3D.new()
+	_core.name = "ManaCore"
+	var orb := SphereMesh.new()
+	orb.radius = 0.072
+	orb.height = 0.144
+	orb.radial_segments = 16
+	orb.rings = 8
+	_core.mesh = orb
+	_core_material = _combat_material(Color("63c4d1"), 0.1)
+	_core_material.emission_enabled = true
+	_core_material.emission = Color("67d7e2")
+	_core.material_override = _core_material
+	_core.position = Vector3(0, 0.62, 0.285)
+	bones[0].add_child(_core)
+	var bezel := MeshInstance3D.new()
+	bezel.name = "CoreBezel"
+	var ring := TorusMesh.new()
+	ring.inner_radius = 0.071
+	ring.outer_radius = 0.084
+	ring.rings = 16
+	ring.ring_segments = 8
+	bezel.mesh = ring
+	bezel.material_override = _combat_material(Color("2e5965"), 0.35)
+	bezel.position = Vector3(0, 0.62, 0.3)
+	bezel.rotation.x = PI / 2.0
+	bones[0].add_child(bezel)
+	set_weapon(_weapon_level)
+	set_core_charge(_core_charge)
+
+
+func _combat_material(color: Color, metallic: float) -> StandardMaterial3D:
+	var material := StandardMaterial3D.new()
+	material.albedo_color = color
+	material.metallic = metallic
+	material.roughness = 0.4
+	return material
+
+
+func _combat_box(parent: Node3D, size: Vector3, at: Vector3, material: StandardMaterial3D) -> MeshInstance3D:
+	var instance := MeshInstance3D.new()
+	var box := BoxMesh.new()
+	box.size = size
+	instance.mesh = box
+	instance.material_override = material
+	instance.position = at
+	parent.add_child(instance)
+	return instance
+
+
+func _cancel_attack() -> void:
+	_attack_kind = ""
+	_attack_time = 0.0
+	_attack_duration = 0.0
+
+
+func _apply_combat_pose(dt: float) -> void:
+	if _sword != null:
+		_sword.visible = _weapon_level > 0
+	if _weapon_level > 0:
+		# The original hand rests at ankle height. Hold the blade ahead at the
+		# waist instead of letting a held sword intersect the floor while walking.
+		var ready_direction := Vector3(0.13, -0.10, 0.44).normalized()
+		bones[2].quaternion = Quaternion(Vector3.DOWN, ready_direction)
+	if _attack_kind.is_empty():
+		return
+	_attack_time = minf(_attack_time + dt, _attack_duration)
+	var progress := _attack_time / _attack_duration
+	var envelope := _smooth(0, 0.16, progress) * (1.0 - _smooth(0.64, 1.0, progress))
+	# The player's physics position is the sole source of vertical motion.
+	bones[0].position = Vector3.ZERO
+	bones[0].scale = Vector3.ONE
+	if _attack_kind == "sword":
+		var sweep := lerpf(1.15, -1.15, _smooth(0.12, 0.65, progress))
+		var cut_direction := Vector3(sin(sweep) * 0.46, 0.07, cos(sweep) * 0.46).normalized()
+		var cut := Quaternion(Vector3.DOWN, cut_direction)
+		bones[2].quaternion = bones[2].quaternion.slerp(cut, envelope)
+		var counter := Quaternion(Vector3.DOWN, Vector3(-0.25, -0.10, 0.35).normalized())
+		bones[1].quaternion = bones[1].quaternion.slerp(counter, envelope * 0.7)
+	else:
+		# Keep the sword secure while the other palm channels the mana bolt.
+		var arm: Node3D = bones[1] if _weapon_level > 0 else bones[2]
+		var cast_direction := Vector3(-0.08 if _weapon_level > 0 else 0.08, 0.10, 0.46).normalized()
+		arm.quaternion = arm.quaternion.slerp(Quaternion(Vector3.DOWN, cast_direction), envelope)
+	if _attack_time >= _attack_duration:
+		_cancel_attack()
 
 
 func _load_original_clips() -> void:

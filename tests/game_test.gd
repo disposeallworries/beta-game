@@ -1,5 +1,5 @@
 extends SceneTree
-## Integration coverage for the real game scene. This tests state transitions;
+## Integration coverage for the preserved practice scene. This tests state transitions;
 ## checkpoint placement here does not claim an automated full-course playthrough.
 
 const STEP: float = 1.0 / 120.0
@@ -13,8 +13,8 @@ func _initialize() -> void:
 
 
 func _run() -> void:
-	var scene: PackedScene = load("res://scenes/main.tscn")
-	_check(scene != null, "Main scene loads")
+	var scene: PackedScene = load("res://scenes/practice.tscn")
+	_check(scene != null, "Practice scene loads")
 	if scene == null:
 		quit(1)
 		return

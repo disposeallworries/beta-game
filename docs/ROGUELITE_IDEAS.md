@@ -1,43 +1,19 @@
-# Roguelite direction: a garden that changes between runs
+# The Last Ember: current loop and next steps
 
-**Design proposal — these mechanics are not implemented.** The current game is still the complete parkour course. This plan builds around its deliberate movement, planted ledge grabs, and readable jumps.
+## Implemented in this version
 
-## Recommended loop
+The playable run now has two connected phases: collect finite mana and swords on a branching parkour map before a three-minute core expires; cross the portal with those actual resources; then protect the Heartkeep through four monster waves. Mana is both ammunition and the reserve that sustains the tower. A found sword lets a skilled player conserve it. Zero mana or a destroyed tower ends the run.
 
-Start a short expedition with three hearts and no relics. Cross a garden sector, reach its sanctuary, and choose one of three relics. Follow the safe route or take a visibly harder detour for extra seeds. A fall costs one heart and returns you to the last checkpoint; losing the final heart ends the run and shows your distance, rewards, and a clear **Retry** button.
+The early portal creates a preparation decision: enter now with a moderate reserve, or risk another resource route before the forced rift. Narrow paths, taller ledges, a wall-jump shaft and recovery penalties give the map consequences. All resource sources are reachable with the normal movement tuning.
 
-Keep the existing course for the first prototype: its eight checkpoints already divide a two-to-four-minute run into useful sectors. Offer relics at checkpoints 2, 4, and 6 so choices do not interrupt every landing. Winning reaches Sunset Garden; failing still leaves something useful to unlock.
+## Suggested next milestone — proposals, not implemented
 
-Manual reset should cost a heart during an expedition, just like a fall, so it cannot become a free rescue. A separate Practice mode can retain the current unlimited checkpoint reset. Pause, inspect choices, and restart from menus without time pressure; keep difficulty in the platforming.
+1. **Run seeds and variation.** Pick a subset of authored resource branches and vary pool capacities, sword locations and wave composition. Keep each selected route validated at the baseline movement speed.
+2. **Relic choices.** Offer a choice at a depleted pool or cleared wave: a single emergency rescue, wider grab timing, cheaper tower fire, a stronger but slower blade, or a mana-efficient bolt. Use tradeoffs rather than permanent speed inflation.
+3. **Tower build choices.** Spend some gathered mana to choose an arcing bolt, a short-range defensive pulse, or a regeneration ward before the siege. Preparation becomes a build, not just a larger number.
+4. **More purposeful monsters.** Add a shield bearer that rewards flanking and a ranged siege caster that needs interception. Clearly telegraph their attacks before adding more enemy counts.
+5. **Persistent rewards.** Award a small currency after a run for new core appearances, biome themes and relic pools. Keep normal jump distances stable so practice remains useful.
 
-## Relics that change decisions without inflating speed
+## Design boundaries
 
-Choose a small pool first, with clear effects and icons:
-
-- **Chalk Gloves:** extend the quick-vault follow-up window from 0.22 to 0.32 seconds. More forgiving timing, with the same movement speed and climb path.
-- **Second Root:** prevent one fatal fall per run, consuming the relic and returning the blob to its checkpoint with one heart. Use a brief fade rather than an upward launch animation.
-- **Heartbud:** gain one maximum heart and heal one heart for this run.
-- **Seed Magnet:** collect nearby seeds without landing precisely on them. Risky routes still require reaching their platforms.
-- **Steady Soles:** reduce wind push in later storm rooms; it never changes walk speed, gravity, or jump height.
-
-Relics last for the run. Avoid mandatory speed stacking, extra jump height, or double jumps: those would undermine the calmer movement and require different obstacle spacing. Successful combinations should offer forgiveness, recovery, information, or better rewards.
-
-## Risk and lasting progression
-
-Put optional seeds on marked side platforms, with the reward visible before the jump. Bank collected seeds at sanctuaries. A run ending loses only unbanked seeds, making “one more detour” a real choice.
-
-Spend banked seeds on blob colors, scarves, garden decorations, new room themes, and additional relic choices. New unlocks broaden future runs; permanent movement-speed upgrades would make old jumps feel inconsistent. Show exactly what was banked and what was lost on the result screen.
-
-## Atmosphere and replayability
-
-Later, assemble runs from hand-authored, tested parkour rooms with compatible entry and exit points. Give every run a seed so a good route can be replayed or shared. Start with garden courtyards, twilight ruins, and a wind tower, each with a clear landmark and its own soundscape.
-
-Add one readable hazard at a time: crumbling platforms with visible cracks and a warning shake, periodic wind with drifting leaves, or moving stone gates with a predictable rhythm. A distant storm approaching the final sector can provide a climax without requiring combat.
-
-## First milestone: three features
-
-1. Three-heart expedition rules, fair checkpoint recovery, and a run-result/retry screen.
-2. Relic choices at three existing checkpoints, using the first four relics above.
-3. Collectible seeds, sanctuary banking, and one cosmetic unlock.
-
-Keep the current fixed map while those choices become fun. Modular rooms, weather hazards, biome variation, and daily seeds belong to the next milestone.
+The current game has authored maps, two sword tiers and a four-wave siege. It does not yet randomize rooms, save permanent progression, offer relic menus, or have an economy outside the current run. The earlier three-heart and seed-banking ideas are alternatives for a later mode; the implemented loss system uses shared mana and tower health.

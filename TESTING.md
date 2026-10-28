@@ -1,29 +1,47 @@
-# Validation
+# Validation · Godot 4.5.1
 
-Use **Godot 4.5.1**. Replace `godot` with its executable path when necessary. Run from the project root:
+Run from the project root with the **4.5.1 Standard** executable. Replace `godot` with its actual path if needed.
 
 ```sh
 godot --headless --editor --path . --import
+godot --headless --path . --script tests/run_state_test.gd
+godot --headless --path . --script tests/expedition_map_test.gd
+godot --headless --path . --script tests/defense_arena_test.gd
+godot --headless --path . --script tests/expedition_hud_test.gd
+godot --headless --path . --script tests/combat_animation_test.gd
+godot --headless --path . --script tests/expedition_game_test.gd
+godot --headless --path . --script tests/expedition_routes_test.gd
+godot --headless --path . --script tests/full_run_test.gd
+godot --headless --path . --quit-after 240
+```
+
+**All 1,655 checks passed** across the complete suite on `4.5.1.stable.official.f62fdbde1`.
+
+## What the new checks prove
+
+- `run_state_test.gd`: lifetime, accepted mana/capacity, normal/forced portal, shared costs, exact-zero loss, victory, frozen terminal states and clean resets.
+- `expedition_map_test.gd`: all resource locations, finite channeling, standing/height/speed requirements, full-core conservation, unique swords, portal gating and stable anchors.
+- `defense_arena_test.gd`: real projectile sweeps and walls, melee cone/range/cooldowns/weapon ownership, two monster types, attacks, four waves, tower auto-fire costs, damage, victory/loss and synchronous depletion. Includes a controls-only four-wave battle with real mana costs.
+- `expedition_hud_test.gd`: phase objectives, resources, transition/results, warnings, mouse-transparent controls, minimum-size layout and radar/heading markers.
+- `combat_animation_test.gd`: held-blade attachment, attack return, no attack root displacement, core charge and parkour-contact priority.
+- `expedition_game_test.gd`: actual main-scene harvesting, pickups, portal placement and inventory transfer, active-world collision changes, combat costs, zero-mana and tower outcomes, pause/focus recovery and Enter restart. Isolated encounter placement is explicitly a fixture.
+- `expedition_routes_test.gd`: four independent controls-only recordings from the real sanctuary. They reach all seven pools, both sword tiers, every designated route platform, and the wall-jump shaft. The prepared-return recording is one continuous route with **310 mana, a blade and a physical return to the portal in 93.89 seconds**, within the 180-second limit.
+- `full_run_test.gd`: one uninterrupted actual main-scene run, using engine movement actions and the public attack API. It replays preparation, crosses the portal and wins four waves. After ready it never edits the player's position/state/velocity, resource values, enemies or damage.
+
+The full run wins with **28 kills, 30 real sword attacks, 167.5 mana and 152 tower health** after about 94 seconds gathering, three seconds transferring, and 72 seconds fighting. Its inputs are deterministic and its pool sources really deplete. Default mechanics and resource costs remain enabled.
+
+## Existing parkour regression checks
+
+```sh
 godot --headless --path . --script tests/controller_test.gd
 godot --headless --path . --script tests/vault_test.gd
 godot --headless --path . --script tests/contact_animation_test.gd
 godot --headless --path . --script tests/game_test.gd
 godot --headless --path . --script tests/course_route_test.gd
-godot --headless --path . --quit-after 240
 ```
 
-| Suite | Checks | Coverage |
-| --- | ---: | --- |
-| `controller_test.gd` | 76 | Reduced walk/sprint/acceleration, diagonal and camera-relative movement, momentum, full/short jumps, coyote time, input buffer, collisions, wall actions, no-teleport ledge catches, climb and respawn. |
-| `vault_test.gd` | 56 | Quick window, 0.48/0.32-second durations, pre-impact momentum, scaled boost/caps, halfway assistance, no height snap or upward exit, clearance, blocked path, drop priority and reset. |
-| `contact_animation_test.gd` | 186 | Actual world-space hand tips stay on the lip in four directions over reachable catch heights/gaps; neutral root during contact; no double jump displacement; hand release, limb lengths, foot bracing and slower animation cadence. |
-| `game_test.gd` | 157 | Expanded course size/route/native shapes, every checkpoint's standing clearance and stability under actual physics, imported clips, input/timer, camera, particles, HUD, finish/restart and animated vault integration. |
-| `course_route_test.gd` | 59 | Full controls-only traversal of all 45 route platforms and eight checkpoints, shaft wall jumps, one supported quick vault, two halfway assists, bounded exit momentum and finish. |
+These retain coverage for the calmer movement, hand-contact/climb geometry, camera, dust, original GLB clips and practice course. `game_test.gd` intentionally loads `scenes/practice.tscn`; `expedition_game_test.gd` and `full_run_test.gd` load the actual new main scene.
 
-**534 checks passed with zero failures** on `4.5.1.stable.official.f62fdbde1`. The full course replay uses 13,475 fixed ticks (about 112 seconds of gameplay); it does not teleport the player or assign its movement state or velocity after the initial spawn. Its recorded inputs are in `tests/route.json`.
+Screenshots in `docs/` include the exploration HUD, actual pool channeling, portal transfer and monster arena. Screenshots can use deliberate camera/encounter placement; gameplay reachability and victory claims come from the separate controls-only tests.
 
-The cinematic-lighting update was additionally checked with the 157 integration checks, 59 full-course checks, and fresh gameplay/overview renders.
-
-The game and hanging/pull-up poses were also rendered using Godot's Compatibility/OpenGL renderer. Screenshots in `docs/` include the starting courtyard, sky-gate route, map overview and a close-up contact fixture. The overview disables fog for a clear distant view; gameplay uses normal fog.
-
-The editable ZIP excludes generated `.godot` caches. If a newer editor already imported the project, close it and regenerate that cache using 4.5.1. CI machines with read-only user directories can set `XDG_DATA_HOME`, `XDG_CONFIG_HOME` and `XDG_CACHE_HOME` to writable locations before running the commands.
+The ZIP excludes generated `.godot` caches. Import with 4.5.1 before running command-line suites from a fresh extraction. CI machines with read-only user directories may set `XDG_DATA_HOME`, `XDG_CONFIG_HOME` and `XDG_CACHE_HOME` to writable locations. No external services or credentials are needed.

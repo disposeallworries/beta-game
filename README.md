@@ -1,80 +1,83 @@
-# Mint Blob Parkour · Mintwind Gardens
+# Mint Blob: The Last Ember · Godot 4.5.1
 
-A native, offline **Godot 4.5.1** parkour game built from the uploaded HTML game and its original animated blob character. No browser wrapper, plug-ins, packages, or network connection is needed to play.
+A playable two-phase parkour and tower-defense prototype. Explore a branching sky-island map, collect finite mana and a sword before your core fades, cross the rift, then protect the Heartkeep from monsters using the reserve you actually gathered.
 
-![Mintwind Gardens](docs/start.png)
+![Mana expedition](docs/expedition.png)
 
 ## Run
 
 1. Install **Godot 4.5.1 Standard** (GDScript; .NET is unnecessary).
-2. Extract the project, then import its `project.godot` in Godot.
-3. Let the character model import and press **F5**. Click in the game to capture the mouse; **Esc** releases it.
+2. Extract the project and import `project.godot`.
+3. Wait for asset import and press **F5**. Click or move to begin.
 
-The project uses the Compatibility renderer, a resizable 1280 × 720 window, and 120 Hz physics. Its main scene is `scenes/main.tscn`. Let 4.5.1 generate its own `.godot` cache rather than reusing a newer editor's cache.
+Everything runs locally. No browser wrapper, plug-ins, external assets, packages, or online service is required. The project uses the Compatibility renderer and 120 Hz physics. Let 4.5.1 generate its own `.godot` cache.
 
-## Cinematic garden lighting
+## Phase I: gather before the core fades
 
-The garden uses a muted dusk sky, warm low-angle sunlight, cool shadow fill, restrained highlights, distance fog, and warm lanterns. Dark HUD panels keep the view comfortable. Route arrows and platform edges remain readable against the cooler background.
+Your core has **180 seconds** of exploration lifetime. The timer waits while you read the intro, then starts when you click or move.
 
-## Roguelite direction
+Seven mana pools lie across four branches of a roughly **151 × 157 meter** map. Routes include narrow beams, longer gaps, vertical ledges, a wall-jump shaft, and an optional shortcut between branches. Cyan beacons, signs and the field map help you find the pools. **Stand still inside a pool while grounded** to draw 24 mana per second. Each pool has a finite reserve and visibly empties; a full core does not waste the pool's remaining mana.
 
-A proposed parkour-first expedition mode is described in [Roguelite ideas](docs/ROGUELITE_IDEAS.md): three hearts, relic choices, risky seed detours and cosmetic unlocks. Those systems are **design ideas**, not implemented gameplay in this version.
+- Mana capacity: **600**; the map contains **810** total.
+- A moderate west-route detour holds the **Garden blade**.
+- The harder Crown route holds the stronger **Crown greatsword**.
+- Attuned anchors provide recovery points. Falling or pressing R costs **15 mana and eight core seconds**; it does not refill drained pools.
 
-## Calmer movement and grounded climbing
+Return to the violet sanctuary portal and press **E** to enter early with at least 60 mana. **250+ mana and a sword is a sensible first target.** When the core lifetime expires, a rift opens automatically wherever you are. A brief transfer carries your collected mana and sword into the second area. Reaching the rift with no mana ends the run.
 
-Horizontal movement is **60% of the previous version**: walking is 3.12 m/s and sprinting builds from 5.7 to 7.8 m/s. Acceleration, air steering, wall pushes, wall-jump speed limits, vault boosts, camera feedback, and sprint dust are tuned consistently. Jump height remains available for the redesigned obstacles.
+## Phase II: protect the Heartkeep
 
-Ledge catches preserve the position you actually reach. Both hands grip the real platform lip, the feet brace against its wall, and the body pulls up before crossing onto the platform. The animation's extra jump displacement has been removed, so it no longer adds a second jump above the physical character.
+![Tower defense](docs/defense.png)
 
-Hold W through a grab, or follow up with W, ↑ or Space within 0.22 seconds, for a supported 0.48-second pull-over. It preserves approach momentum and adds a modest 0.9 m/s, capped at 8.7 m/s. When half the body is already above a lip, a 0.32-second step-over helps complete the jump. Waiting at a ledge retains the normal 0.95-second climb. All climbs check headroom and standing clearance; there is no upward launch on exit.
+Defend a **200-health tower** through four escalating waves: **4, 6, 8 and 10 monsters**. Crawlers advance quickly; horned brutes have more health and deal heavier tower damage. A short preparation period and breaks between waves give you time to reposition. The threat radar shows incoming enemies around the tower.
 
-## A larger garden course
+Your mana reserve is the shared resource for the whole defense:
 
-**45 route platforms, 47 collision pieces, eight checkpoints, and roughly 250 meters of winding route.** The gaps fit the lower movement speed. Follow the gold arrows through:
+- Core upkeep drains **0.6 mana per second**.
+- The tower automatically fires at nearby monsters, spending **two mana per bolt**.
+- Your mana bolts cost **eight mana**, deal 24 damage, and can be fired by holding the attack button.
+- A collected sword attacks for **no mana**. The Garden blade deals 30 damage; the Crown greatsword deals 44. Aim and approach from the correct side of the monster.
+- Monsters that reach you can strike your core and drain mana. Returning to the tower with R costs **20 mana**.
 
-1. Arrival courtyard
-2. Mint garden
-3. Terrace ruins
-4. Wall-jump courtyard
-5. Sky gate
-6. Cloud orchard
-7. Wind bridge
-8. Sunset garden and the finish flag
-
-Trees, planted courtyards, stone arches, lanterns, hanging roots, distant floating islands, clouds and a soft sky give each part of the route a place in the garden. Checkpoint names and numbered stones help you keep track of progress.
-
-![Course overview](docs/overview.png)
-
-The overview uses a distant camera with fog disabled for visibility; gameplay keeps its normal distance fog.
+**Zero mana or a destroyed tower loses the run.** Clear all four waves with both intact to win. The result card explains the outcome; press Enter for a fresh expedition. Resources, pickups, enemies, weapons and timers reset together.
 
 ## Controls
 
-| Key | Action |
+| Input | Action |
 | --- | --- |
 | W / A / S / D | Move relative to the camera |
 | Shift | Sprint |
-| Space | Jump, wall jump, or climb a grabbed ledge |
-| Release Space early | Shorten a normal jump |
-| W / ↑ / Space just after grabbing | Quick pull-over; holding W through the grab also works |
+| Space | Jump, wall jump, or climb a ledge |
+| Hold W through a grab | Supported quick vault |
 | S / Ctrl | Let go of a wall or ledge |
-| Mouse after clicking | Orbit the camera |
-| Esc | Release the mouse |
-| R | Return to the current checkpoint, keeping elapsed time |
-| Enter after finishing | Start a new run |
+| Mouse after clicking | Orbit the camera / face attacks |
+| E near the sanctuary portal | Enter the defense early with enough mana |
+| Left mouse | Attack with the selected weapon; hold to repeat |
+| Right mouse | Swing a collected sword |
+| Q | Switch between the mana bolt and collected sword |
+| F / V | Keyboard alternatives for bolt / sword attacks |
+| R | Return to your anchor or tower, paying its resource penalty |
+| Esc | Pause and release the mouse; Esc or click resumes |
+| Enter on a result or while paused | Start a new expedition |
 
-The timer starts with WASD or Space. Alternate walls and press Space again at each contact to climb the shaft. Reach the gold finish platform to complete the course. Progress is not saved between runs.
+The game also pauses when the window loses focus, including during portal transfer. Walking and sprinting retain the calmer **3.12 / 5.7–7.8 m/s** tuning. Hands remain planted during catches and pull-ups; the attack animation does not alter physical jump height.
 
-## Edit and export
+## Development and practice
 
-- `scripts/player.gd`: movement constants, axis-separated collision, jumps and ledge mechanics.
-- `scripts/blob_visual.gd`: original GLB clip blending, planted-hand contact and foot poses.
-- `scripts/course.gd`: platform coordinates, checkpoints, route metadata and procedural garden scenery.
-- `scripts/game.gd`: input, timer, checkpoint progression and restart.
-- `scripts/follow_camera.gd`, `dust.gd`, `game_hud.gd`: camera, effects and native UI.
-- `assets/mint_blob.glb`: the original character extracted from the uploaded HTML.
+The original garden course remains available as **`scenes/practice.tscn`**. Open it and press F6 for unrestricted checkpoint parkour. F5 always starts the new expedition.
 
-The map is generated when the scene starts; edit `course.gd` to change it. To export an executable, install the matching **4.5.1 export templates** and use **Project → Export** for your platform.
+- `scripts/game.gd`: connects input, exploration, portal transfer, defense and results.
+- `scripts/run_state.gd`: core lifetime, shared mana, weapon ownership, win/loss rules.
+- `scripts/expedition_map.gd`: branching map, finite pools, pickups and anchors.
+- `scripts/defense_arena.gd`: monsters, waves, tower, projectiles and melee damage.
+- `scripts/expedition_hud.gd` / `expedition_radar.gd`: phase instructions, resource bars, context and tactical map.
+- `scripts/player.gd` / `blob_visual.gd`: parkour physics, original character clips, hand contacts, held swords and attack poses.
+- `scripts/course.gd`: shared geometry and cinematic dusk lighting; also the practice course.
 
-## Validation
+The main maps are built procedurally from authored coordinates at startup. Tune resources in `run_state.gd`, pool locations in `expedition_map.gd`, and wave/combat values in `defense_arena.gd`. To make an executable, install the matching **4.5.1 export templates** and use **Project → Export**.
 
-Tested on **Godot 4.5.1.stable.official.f62fdbde1**. All **534 checks pass**, including a controls-only run through the entire expanded course, every checkpoint, actual hand-tip contact, and the revised movement and vault mechanics. See `TESTING.md` for commands and coverage.
+## Verification
+
+Tested using **Godot 4.5.1.stable.official.f62fdbde1**: **1,655 checks passed** across the movement, resources, UI, combat and connected-run suites. The complete main-scene playtest starts with an empty core, uses actual movement inputs to gather **310 mana and a blade**, returns to the portal in **93.89 seconds**, transfers normally, and defeats all **28 monsters**. It ends with **167.5 mana and 152 tower health**, without test-only teleports, resource edits, enemy edits, or damage helpers.
+
+All seven pools and both swords also have independent controls-only reachability coverage. See `TESTING.md` for repeatable checks and `docs/ROGUELITE_IDEAS.md` for future expansion ideas. This is a playable prototype with authored maps and four defense waves; persistent unlocks and randomized rooms are future work.

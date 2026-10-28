@@ -5,6 +5,8 @@ var yaw: float = 0.0
 var pitch: float = 0.35
 var idle: float = 9.0
 var distance: float = 5.2
+var base_distance: float = 5.2
+var base_fov: float = 60.0
 var dip: float = 0.0
 var target := Vector3(0, 1, 4)
 var boxes: Array[AABB] = []
@@ -26,14 +28,14 @@ func tick(dt: float, player: ParkourPlayer) -> void:
 	target.z = lerpf(target.z, player.position.z, 1.0 - exp(-18.0 * dt))
 	target.y = lerpf(target.y, player.position.y + 1.0 - dip, 1.0 - exp(-9.0 * dt))
 	var orbit_direction := Vector3(sin(yaw) * cos(pitch), sin(pitch), cos(yaw) * cos(pitch))
-	var desired_distance: float = 5.2
+	var desired_distance: float = base_distance
 	for bounds in boxes:
 		desired_distance = minf(desired_distance, ray_box(target, orbit_direction, bounds) - 0.3)
 	desired_distance = maxf(desired_distance, 0.8)
 	distance = desired_distance if desired_distance < distance else lerpf(distance, desired_distance, 1.0 - exp(-4.0 * dt))
 	position = target + orbit_direction * distance
 	look_at(target + Vector3.UP * 0.1, Vector3.UP)
-	fov = lerpf(fov, 60.0 + clampf((speed / ParkourPlayer.MOVEMENT_SCALE - 6.0) * 1.4, 0.0, 18.0), 1.0 - exp(-5.0 * dt))
+	fov = lerpf(fov, base_fov + clampf((speed / ParkourPlayer.MOVEMENT_SCALE - 6.0) * 1.4, 0.0, 18.0), 1.0 - exp(-5.0 * dt))
 
 static func ray_box(origin: Vector3, direction: Vector3, bounds: AABB) -> float:
 	var low: float = 0.0
